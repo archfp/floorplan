@@ -1,0 +1,490 @@
+# FloorPlan output from ArchFP: UVA's Rapid Prototyping FloorPlanner.
+# Formatted for Input to HotSpot.
+# Line Format: <unit-name>\t<width>\t<height>\t<left-x>\t<bottom-y>
+# all dimensions are in meters
+# comment lines begin with a '#'
+# comments and empty lines are ignored
+
+# Start of Grid1 Layout.  There are 32 components in a 4 by 8 grid.
+# Total Grid Stats: X=0 Y=0 W=13.1144mm H=13.1275mm Area=172.16mm^2
+# Start of Cluster1 Layout.
+# Total Cluster Stats: X=0 Y=0 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0	0
+# Start of Grid2 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=0.316891 Y=0.965658 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.000316891	0.000965658
+ 	0.00148086	0.000675285	0.00179775	0.000965658
+# End of Grid2 Layout.
+ 	0.00296171	0.000155316	0.000316891	0.000810342
+# Start of Grid3 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=0.316891 Y=-1.11022e-016 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.000316891	-1.11022e-019
+ 	0.00148086	0.000810342	0.00179775	-1.11022e-019
+# End of Grid3 Layout.
+# End of Cluster1 Layout.
+# Start of Cluster2 Layout.
+# Total Cluster Stats: X=3.2786 Y=0 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.0032786	0
+# Start of Grid4 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=3.59549 Y=0.965658 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.00359549	0.000965658
+ 	0.00148086	0.000675285	0.00507635	0.000965658
+# End of Grid4 Layout.
+ 	0.00296171	0.000155316	0.00359549	0.000810342
+# Start of Grid5 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=3.59549 Y=-1.11022e-016 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.00359549	-1.11022e-019
+ 	0.00148086	0.000810342	0.00507635	-1.11022e-019
+# End of Grid5 Layout.
+# End of Cluster2 Layout.
+# Start of Cluster3 Layout.
+# Total Cluster Stats: X=6.55721 Y=0 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.00655721	0
+# Start of Grid6 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=6.8741 Y=0.965658 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.0068741	0.000965658
+ 	0.00148086	0.000675285	0.00835495	0.000965658
+# End of Grid6 Layout.
+ 	0.00296171	0.000155316	0.0068741	0.000810342
+# Start of Grid7 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=6.8741 Y=-1.11022e-016 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.0068741	-1.11022e-019
+ 	0.00148086	0.000810342	0.00835495	-1.11022e-019
+# End of Grid7 Layout.
+# End of Cluster3 Layout.
+# Start of Cluster4 Layout.
+# Total Cluster Stats: X=9.83581 Y=0 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.00983581	0
+# Start of Grid8 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=10.1527 Y=0.965658 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.0101527	0.000965658
+ 	0.00148086	0.000675285	0.0116336	0.000965658
+# End of Grid8 Layout.
+ 	0.00296171	0.000155316	0.0101527	0.000810342
+# Start of Grid9 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=10.1527 Y=-1.11022e-016 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.0101527	-1.11022e-019
+ 	0.00148086	0.000810342	0.0116336	-1.11022e-019
+# End of Grid9 Layout.
+# End of Cluster4 Layout.
+# Start of Cluster5 Layout.
+# Total Cluster Stats: X=0 Y=1.64094 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0	0.00164094
+# Start of Grid10 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=0.316891 Y=2.6066 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.000316891	0.0026066
+ 	0.00148086	0.000675285	0.00179775	0.0026066
+# End of Grid10 Layout.
+ 	0.00296171	0.000155316	0.000316891	0.00245128
+# Start of Grid11 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=0.316891 Y=1.64094 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.000316891	0.00164094
+ 	0.00148086	0.000810342	0.00179775	0.00164094
+# End of Grid11 Layout.
+# End of Cluster5 Layout.
+# Start of Cluster6 Layout.
+# Total Cluster Stats: X=3.2786 Y=1.64094 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.0032786	0.00164094
+# Start of Grid12 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=3.59549 Y=2.6066 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.00359549	0.0026066
+ 	0.00148086	0.000675285	0.00507635	0.0026066
+# End of Grid12 Layout.
+ 	0.00296171	0.000155316	0.00359549	0.00245128
+# Start of Grid13 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=3.59549 Y=1.64094 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.00359549	0.00164094
+ 	0.00148086	0.000810342	0.00507635	0.00164094
+# End of Grid13 Layout.
+# End of Cluster6 Layout.
+# Start of Cluster7 Layout.
+# Total Cluster Stats: X=6.55721 Y=1.64094 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.00655721	0.00164094
+# Start of Grid14 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=6.8741 Y=2.6066 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.0068741	0.0026066
+ 	0.00148086	0.000675285	0.00835495	0.0026066
+# End of Grid14 Layout.
+ 	0.00296171	0.000155316	0.0068741	0.00245128
+# Start of Grid15 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=6.8741 Y=1.64094 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.0068741	0.00164094
+ 	0.00148086	0.000810342	0.00835495	0.00164094
+# End of Grid15 Layout.
+# End of Cluster7 Layout.
+# Start of Cluster8 Layout.
+# Total Cluster Stats: X=9.83581 Y=1.64094 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.00983581	0.00164094
+# Start of Grid16 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=10.1527 Y=2.6066 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.0101527	0.0026066
+ 	0.00148086	0.000675285	0.0116336	0.0026066
+# End of Grid16 Layout.
+ 	0.00296171	0.000155316	0.0101527	0.00245128
+# Start of Grid17 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=10.1527 Y=1.64094 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.0101527	0.00164094
+ 	0.00148086	0.000810342	0.0116336	0.00164094
+# End of Grid17 Layout.
+# End of Cluster8 Layout.
+# Start of Cluster9 Layout.
+# Total Cluster Stats: X=0 Y=3.28189 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0	0.00328189
+# Start of Grid18 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=0.316891 Y=4.24754 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.000316891	0.00424754
+ 	0.00148086	0.000675285	0.00179775	0.00424754
+# End of Grid18 Layout.
+ 	0.00296171	0.000155316	0.000316891	0.00409223
+# Start of Grid19 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=0.316891 Y=3.28189 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.000316891	0.00328189
+ 	0.00148086	0.000810342	0.00179775	0.00328189
+# End of Grid19 Layout.
+# End of Cluster9 Layout.
+# Start of Cluster10 Layout.
+# Total Cluster Stats: X=3.2786 Y=3.28189 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.0032786	0.00328189
+# Start of Grid20 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=3.59549 Y=4.24754 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.00359549	0.00424754
+ 	0.00148086	0.000675285	0.00507635	0.00424754
+# End of Grid20 Layout.
+ 	0.00296171	0.000155316	0.00359549	0.00409223
+# Start of Grid21 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=3.59549 Y=3.28189 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.00359549	0.00328189
+ 	0.00148086	0.000810342	0.00507635	0.00328189
+# End of Grid21 Layout.
+# End of Cluster10 Layout.
+# Start of Cluster11 Layout.
+# Total Cluster Stats: X=6.55721 Y=3.28189 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.00655721	0.00328189
+# Start of Grid22 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=6.8741 Y=4.24754 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.0068741	0.00424754
+ 	0.00148086	0.000675285	0.00835495	0.00424754
+# End of Grid22 Layout.
+ 	0.00296171	0.000155316	0.0068741	0.00409223
+# Start of Grid23 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=6.8741 Y=3.28189 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.0068741	0.00328189
+ 	0.00148086	0.000810342	0.00835495	0.00328189
+# End of Grid23 Layout.
+# End of Cluster11 Layout.
+# Start of Cluster12 Layout.
+# Total Cluster Stats: X=9.83581 Y=3.28189 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.00983581	0.00328189
+# Start of Grid24 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=10.1527 Y=4.24754 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.0101527	0.00424754
+ 	0.00148086	0.000675285	0.0116336	0.00424754
+# End of Grid24 Layout.
+ 	0.00296171	0.000155316	0.0101527	0.00409223
+# Start of Grid25 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=10.1527 Y=3.28189 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.0101527	0.00328189
+ 	0.00148086	0.000810342	0.0116336	0.00328189
+# End of Grid25 Layout.
+# End of Cluster12 Layout.
+# Start of Cluster13 Layout.
+# Total Cluster Stats: X=0 Y=4.92283 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0	0.00492283
+# Start of Grid26 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=0.316891 Y=5.88849 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.000316891	0.00588849
+ 	0.00148086	0.000675285	0.00179775	0.00588849
+# End of Grid26 Layout.
+ 	0.00296171	0.000155316	0.000316891	0.00573317
+# Start of Grid27 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=0.316891 Y=4.92283 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.000316891	0.00492283
+ 	0.00148086	0.000810342	0.00179775	0.00492283
+# End of Grid27 Layout.
+# End of Cluster13 Layout.
+# Start of Cluster14 Layout.
+# Total Cluster Stats: X=3.2786 Y=4.92283 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.0032786	0.00492283
+# Start of Grid28 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=3.59549 Y=5.88849 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.00359549	0.00588849
+ 	0.00148086	0.000675285	0.00507635	0.00588849
+# End of Grid28 Layout.
+ 	0.00296171	0.000155316	0.00359549	0.00573317
+# Start of Grid29 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=3.59549 Y=4.92283 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.00359549	0.00492283
+ 	0.00148086	0.000810342	0.00507635	0.00492283
+# End of Grid29 Layout.
+# End of Cluster14 Layout.
+# Start of Cluster15 Layout.
+# Total Cluster Stats: X=6.55721 Y=4.92283 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.00655721	0.00492283
+# Start of Grid30 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=6.8741 Y=5.88849 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.0068741	0.00588849
+ 	0.00148086	0.000675285	0.00835495	0.00588849
+# End of Grid30 Layout.
+ 	0.00296171	0.000155316	0.0068741	0.00573317
+# Start of Grid31 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=6.8741 Y=4.92283 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.0068741	0.00492283
+ 	0.00148086	0.000810342	0.00835495	0.00492283
+# End of Grid31 Layout.
+# End of Cluster15 Layout.
+# Start of Cluster16 Layout.
+# Total Cluster Stats: X=9.83581 Y=4.92283 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.00983581	0.00492283
+# Start of Grid32 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=10.1527 Y=5.88849 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.0101527	0.00588849
+ 	0.00148086	0.000675285	0.0116336	0.00588849
+# End of Grid32 Layout.
+ 	0.00296171	0.000155316	0.0101527	0.00573317
+# Start of Grid33 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=10.1527 Y=4.92283 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.0101527	0.00492283
+ 	0.00148086	0.000810342	0.0116336	0.00492283
+# End of Grid33 Layout.
+# End of Cluster16 Layout.
+# Start of Cluster17 Layout.
+# Total Cluster Stats: X=0 Y=6.56377 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0	0.00656377
+# Start of Grid34 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=0.316891 Y=7.52943 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.000316891	0.00752943
+ 	0.00148086	0.000675285	0.00179775	0.00752943
+# End of Grid34 Layout.
+ 	0.00296171	0.000155316	0.000316891	0.00737411
+# Start of Grid35 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=0.316891 Y=6.56377 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.000316891	0.00656377
+ 	0.00148086	0.000810342	0.00179775	0.00656377
+# End of Grid35 Layout.
+# End of Cluster17 Layout.
+# Start of Cluster18 Layout.
+# Total Cluster Stats: X=3.2786 Y=6.56377 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.0032786	0.00656377
+# Start of Grid36 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=3.59549 Y=7.52943 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.00359549	0.00752943
+ 	0.00148086	0.000675285	0.00507635	0.00752943
+# End of Grid36 Layout.
+ 	0.00296171	0.000155316	0.00359549	0.00737411
+# Start of Grid37 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=3.59549 Y=6.56377 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.00359549	0.00656377
+ 	0.00148086	0.000810342	0.00507635	0.00656377
+# End of Grid37 Layout.
+# End of Cluster18 Layout.
+# Start of Cluster19 Layout.
+# Total Cluster Stats: X=6.55721 Y=6.56377 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.00655721	0.00656377
+# Start of Grid38 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=6.8741 Y=7.52943 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.0068741	0.00752943
+ 	0.00148086	0.000675285	0.00835495	0.00752943
+# End of Grid38 Layout.
+ 	0.00296171	0.000155316	0.0068741	0.00737411
+# Start of Grid39 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=6.8741 Y=6.56377 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.0068741	0.00656377
+ 	0.00148086	0.000810342	0.00835495	0.00656377
+# End of Grid39 Layout.
+# End of Cluster19 Layout.
+# Start of Cluster20 Layout.
+# Total Cluster Stats: X=9.83581 Y=6.56377 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.00983581	0.00656377
+# Start of Grid40 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=10.1527 Y=7.52943 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.0101527	0.00752943
+ 	0.00148086	0.000675285	0.0116336	0.00752943
+# End of Grid40 Layout.
+ 	0.00296171	0.000155316	0.0101527	0.00737411
+# Start of Grid41 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=10.1527 Y=6.56377 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.0101527	0.00656377
+ 	0.00148086	0.000810342	0.0116336	0.00656377
+# End of Grid41 Layout.
+# End of Cluster20 Layout.
+# Start of Cluster21 Layout.
+# Total Cluster Stats: X=0 Y=8.20471 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0	0.00820471
+# Start of Grid42 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=0.316891 Y=9.17037 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.000316891	0.00917037
+ 	0.00148086	0.000675285	0.00179775	0.00917037
+# End of Grid42 Layout.
+ 	0.00296171	0.000155316	0.000316891	0.00901506
+# Start of Grid43 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=0.316891 Y=8.20471 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.000316891	0.00820471
+ 	0.00148086	0.000810342	0.00179775	0.00820471
+# End of Grid43 Layout.
+# End of Cluster21 Layout.
+# Start of Cluster22 Layout.
+# Total Cluster Stats: X=3.2786 Y=8.20471 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.0032786	0.00820471
+# Start of Grid44 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=3.59549 Y=9.17037 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.00359549	0.00917037
+ 	0.00148086	0.000675285	0.00507635	0.00917037
+# End of Grid44 Layout.
+ 	0.00296171	0.000155316	0.00359549	0.00901506
+# Start of Grid45 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=3.59549 Y=8.20471 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.00359549	0.00820471
+ 	0.00148086	0.000810342	0.00507635	0.00820471
+# End of Grid45 Layout.
+# End of Cluster22 Layout.
+# Start of Cluster23 Layout.
+# Total Cluster Stats: X=6.55721 Y=8.20471 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.00655721	0.00820471
+# Start of Grid46 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=6.8741 Y=9.17037 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.0068741	0.00917037
+ 	0.00148086	0.000675285	0.00835495	0.00917037
+# End of Grid46 Layout.
+ 	0.00296171	0.000155316	0.0068741	0.00901506
+# Start of Grid47 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=6.8741 Y=8.20471 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.0068741	0.00820471
+ 	0.00148086	0.000810342	0.00835495	0.00820471
+# End of Grid47 Layout.
+# End of Cluster23 Layout.
+# Start of Cluster24 Layout.
+# Total Cluster Stats: X=9.83581 Y=8.20471 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.00983581	0.00820471
+# Start of Grid48 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=10.1527 Y=9.17037 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.0101527	0.00917037
+ 	0.00148086	0.000675285	0.0116336	0.00917037
+# End of Grid48 Layout.
+ 	0.00296171	0.000155316	0.0101527	0.00901506
+# Start of Grid49 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=10.1527 Y=8.20471 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.0101527	0.00820471
+ 	0.00148086	0.000810342	0.0116336	0.00820471
+# End of Grid49 Layout.
+# End of Cluster24 Layout.
+# Start of Cluster25 Layout.
+# Total Cluster Stats: X=0 Y=9.84566 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0	0.00984566
+# Start of Grid50 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=0.316891 Y=10.8113 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.000316891	0.0108113
+ 	0.00148086	0.000675285	0.00179775	0.0108113
+# End of Grid50 Layout.
+ 	0.00296171	0.000155316	0.000316891	0.010656
+# Start of Grid51 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=0.316891 Y=9.84566 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.000316891	0.00984566
+ 	0.00148086	0.000810342	0.00179775	0.00984566
+# End of Grid51 Layout.
+# End of Cluster25 Layout.
+# Start of Cluster26 Layout.
+# Total Cluster Stats: X=3.2786 Y=9.84566 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.0032786	0.00984566
+# Start of Grid52 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=3.59549 Y=10.8113 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.00359549	0.0108113
+ 	0.00148086	0.000675285	0.00507635	0.0108113
+# End of Grid52 Layout.
+ 	0.00296171	0.000155316	0.00359549	0.010656
+# Start of Grid53 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=3.59549 Y=9.84566 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.00359549	0.00984566
+ 	0.00148086	0.000810342	0.00507635	0.00984566
+# End of Grid53 Layout.
+# End of Cluster26 Layout.
+# Start of Cluster27 Layout.
+# Total Cluster Stats: X=6.55721 Y=9.84566 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.00655721	0.00984566
+# Start of Grid54 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=6.8741 Y=10.8113 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.0068741	0.0108113
+ 	0.00148086	0.000675285	0.00835495	0.0108113
+# End of Grid54 Layout.
+ 	0.00296171	0.000155316	0.0068741	0.010656
+# Start of Grid55 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=6.8741 Y=9.84566 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.0068741	0.00984566
+ 	0.00148086	0.000810342	0.00835495	0.00984566
+# End of Grid55 Layout.
+# End of Cluster27 Layout.
+# Start of Cluster28 Layout.
+# Total Cluster Stats: X=9.83581 Y=9.84566 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.00983581	0.00984566
+# Start of Grid56 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=10.1527 Y=10.8113 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.0101527	0.0108113
+ 	0.00148086	0.000675285	0.0116336	0.0108113
+# End of Grid56 Layout.
+ 	0.00296171	0.000155316	0.0101527	0.010656
+# Start of Grid57 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=10.1527 Y=9.84566 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.0101527	0.00984566
+ 	0.00148086	0.000810342	0.0116336	0.00984566
+# End of Grid57 Layout.
+# End of Cluster28 Layout.
+# Start of Cluster29 Layout.
+# Total Cluster Stats: X=0 Y=11.4866 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0	0.0114866
+# Start of Grid58 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=0.316891 Y=12.4523 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.000316891	0.0124523
+ 	0.00148086	0.000675285	0.00179775	0.0124523
+# End of Grid58 Layout.
+ 	0.00296171	0.000155316	0.000316891	0.0122969
+# Start of Grid59 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=0.316891 Y=11.4866 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.000316891	0.0114866
+ 	0.00148086	0.000810342	0.00179775	0.0114866
+# End of Grid59 Layout.
+# End of Cluster29 Layout.
+# Start of Cluster30 Layout.
+# Total Cluster Stats: X=3.2786 Y=11.4866 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.0032786	0.0114866
+# Start of Grid60 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=3.59549 Y=12.4523 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.00359549	0.0124523
+ 	0.00148086	0.000675285	0.00507635	0.0124523
+# End of Grid60 Layout.
+ 	0.00296171	0.000155316	0.00359549	0.0122969
+# Start of Grid61 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=3.59549 Y=11.4866 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.00359549	0.0114866
+ 	0.00148086	0.000810342	0.00507635	0.0114866
+# End of Grid61 Layout.
+# End of Cluster30 Layout.
+# Start of Cluster31 Layout.
+# Total Cluster Stats: X=6.55721 Y=11.4866 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.00655721	0.0114866
+# Start of Grid62 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=6.8741 Y=12.4523 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.0068741	0.0124523
+ 	0.00148086	0.000675285	0.00835495	0.0124523
+# End of Grid62 Layout.
+ 	0.00296171	0.000155316	0.0068741	0.0122969
+# Start of Grid63 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=6.8741 Y=11.4866 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.0068741	0.0114866
+ 	0.00148086	0.000810342	0.00835495	0.0114866
+# End of Grid63 Layout.
+# End of Cluster31 Layout.
+# Start of Cluster32 Layout.
+# Total Cluster Stats: X=9.83581 Y=11.4866 W=3.2786mm H=1.64094mm Area=5.38mm^2
+ 	0.000316891	0.00164094	0.00983581	0.0114866
+# Start of Grid64 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=10.1527 Y=12.4523 W=2.96171mm H=0.675285mm Area=2mm^2
+ 	0.00148086	0.000675285	0.0101527	0.0124523
+ 	0.00148086	0.000675285	0.0116336	0.0124523
+# End of Grid64 Layout.
+ 	0.00296171	0.000155316	0.0101527	0.0122969
+# Start of Grid65 Layout.  There are 2 components in a 2 by 1 grid.
+# Total Grid Stats: X=10.1527 Y=11.4866 W=2.96171mm H=0.810342mm Area=2.4mm^2
+ 	0.00148086	0.000810342	0.0101527	0.0114866
+ 	0.00148086	0.000810342	0.0116336	0.0114866
+# End of Grid65 Layout.
+# End of Cluster32 Layout.
+# End of Grid1 Layout.

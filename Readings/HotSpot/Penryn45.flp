@@ -1,0 +1,73 @@
+# FloorPlan output from ArchFP: UVA's Rapid Prototyping FloorPlanner.
+# Formatted for Input to HotSpot.
+# Line Format: <unit-name>\t<width>\t<height>\t<left-x>\t<bottom-y>
+# all dimensions are in meters
+# comment lines begin with a '#'
+# comments and empty lines are ignored
+
+# Start of Cluster1 Layout.
+# Total Cluster Stats: X=0 Y=0 W=5.0555mm H=5.0555mm Area=25.5581mm^2
+# Start of Cluster2 Layout.
+# Total Cluster Stats: X=0 Y=0 W=5.0555mm H=2.61925mm Area=13.2416mm^2
+# Start of Cluster3 Layout.
+# Total Cluster Stats: X=3.02169 Y=0 W=2.03381mm H=2.61925mm Area=5.32708mm^2
+# Start of Cluster4 Layout.
+# Total Cluster Stats: X=3.02169 Y=2.03857 W=2.03381mm H=0.580682mm Area=1.181mm^2
+ 	0.00123934	0.000580682	0.00302169	0.00203857
+ 	6.68247e-005	0.000580682	0.00498868	0.00203857
+ 	0.00072765	0.000580682	0.00426103	0.00203857
+# End of Cluster4 Layout.
+# Start of Cluster5 Layout.
+# Total Cluster Stats: X=3.02169 Y=0 W=2.03381mm H=0.207403mm Area=0.42182mm^2
+ 	0.00165647	0.000207403	0.00302169	0
+ 	0.000377347	0.000207403	0.00467816	0
+# End of Cluster5 Layout.
+# Start of Cluster6 Layout.
+# Total Cluster Stats: X=3.02169 Y=0.207403 W=2.03381mm H=1.83117mm Area=3.72426mm^2
+# Start of Cluster7 Layout.
+# Total Cluster Stats: X=3.02169 Y=0.207403 W=1.57159mm H=1.83117mm Area=2.87784mm^2
+ 	0.00157159	0.00142455	0.00302169	0.000614024
+# Start of Cluster8 Layout.
+# Total Cluster Stats: X=3.02169 Y=0.207403 W=1.57159mm H=0.406621mm Area=0.63904mm^2
+ 	0.00103564	0.000406621	0.00302169	0.000207403
+ 	8.25015e-005	0.000406621	0.00451078	0.000207403
+ 	0.000453443	0.000406621	0.00405733	0.000207403
+# End of Cluster8 Layout.
+# End of Cluster7 Layout.
+ 	0.000462226	0.00183117	0.00459328	0.000207403
+# End of Cluster6 Layout.
+# End of Cluster3 Layout.
+# Start of Cluster9 Layout.
+# Total Cluster Stats: X=0 Y=0 W=3.02169mm H=2.61925mm Area=7.91457mm^2
+# Start of Cluster10 Layout.
+# Total Cluster Stats: X=0 Y=2.03986 W=3.02169mm H=0.579394mm Area=1.75075mm^2
+ 	0.00242505	0.000579394	0	0.00203986
+ 	0.000596635	0.000579394	0.00242505	0.00203986
+# End of Cluster10 Layout.
+ 	0.00302169	0.00203986	0	0
+# End of Cluster9 Layout.
+# End of Cluster2 Layout.
+# Start of Cluster11 Layout.
+# Total Cluster Stats: X=0 Y=2.61925 W=5.0555mm H=2.43625mm Area=12.3165mm^2
+ 	0.00230408	0.00243625	0	0.00261925
+# Start of Cluster12 Layout.
+# Total Cluster Stats: X=2.30408 Y=2.61925 W=2.75143mm H=2.43625mm Area=6.70316mm^2
+ 	0.00275143	0.00123728	0.00230408	0.00381823
+# Start of Cluster13 Layout.
+# Total Cluster Stats: X=2.30408 Y=2.61925 W=2.75143mm H=1.19897mm Area=3.29888mm^2
+# Start of Cluster14 Layout.
+# Total Cluster Stats: X=2.30408 Y=2.61925 W=0.767324mm H=1.19897mm Area=0.92mm^2
+ 	0.000767324	0.000528335	0.00230408	0.00328989
+ 	0.000767324	0.000369713	0.00230408	0.00261925
+ 	0.000767324	0.000300924	0.00230408	0.00298897
+# End of Cluster14 Layout.
+ 	0.00074081	0.00119897	0.00431469	0.00261925
+# Start of Cluster15 Layout.
+# Total Cluster Stats: X=3.0714 Y=2.61925 W=1.24329mm H=1.19897mm Area=1.49067mm^2
+ 	0.00124329	0.000862261	0.0030714	0.00295597
+ 	0.00124329	0.000336712	0.0030714	0.00261925
+# End of Cluster15 Layout.
+# End of Cluster13 Layout.
+# End of Cluster12 Layout.
+# End of Cluster11 Layout.
+# End of Cluster1 Layout.

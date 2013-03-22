@@ -1,0 +1,94 @@
+# depslib dependency file v1.0
+1358288549 source:c:\users\charles lu\documents\my git\2012s_fpproject\floorplangit\main.cc
+	<iostream>
+	<cstdlib>
+	<cmath>
+	"MathUtil.hh"
+	"Floorplan.hh"
+
+1339463874 c:\users\charles lu\documents\my git\2012s_fpproject\floorplangit\mathutil.hh
+	<iostream>
+
+1345619294 c:\users\charles lu\documents\my git\2012s_fpproject\floorplangit\floorplan.hh
+	<string>
+	<iostream>
+	<map>
+
+1339463874 source:c:\users\charles lu\documents\my git\2012s_fpproject\floorplangit\mathutil.cc
+	<cmath>
+	<climits>
+	<cstdlib>
+	"MathUtil.hh"
+
+1358288549 source:c:\users\charles lu\documents\my git\2012s_fpproject\floorplangit\floorplan.cc
+	<stdlib.h>
+	<iostream>
+	<sstream>
+	<fstream>
+	<cmath>
+	<stdexcept>
+	"MathUtil.hh"
+	"Floorplan.hh"
+
+1358191969 source:/Users/my_past_memory/Documents/2012S_FPProject/FloorPlanGit/Floorplan.cc
+	<stdlib.h>
+	<iostream>
+	<sstream>
+	<fstream>
+	<cmath>
+	<stdexcept>
+	"MathUtil.hh"
+	"Floorplan.hh"
+
+1340694101 /Users/my_past_memory/Documents/2012S_FPProject/FloorPlanGit/MathUtil.hh
+	<iostream>
+
+1345622441 /Users/my_past_memory/Documents/2012S_FPProject/FloorPlanGit/Floorplan.hh
+	<string>
+	<iostream>
+	<map>
+
+1358147759 source:/Users/my_past_memory/Documents/2012S_FPProject/FloorPlanGit/Main.cc
+	<iostream>
+	<cstdlib>
+	<cmath>
+	"MathUtil.hh"
+	"Floorplan.hh"
+
+1340694101 source:/Users/my_past_memory/Documents/2012S_FPProject/FloorPlanGit/MathUtil.cc
+	<cmath>
+	<climits>
+	<cstdlib>
+	"MathUtil.hh"
+
+1345651356 source:c:\users\charles lu\documents\mygit\2012s_fpproject\floorplangit\main.cc
+	<iostream>
+	<cstdlib>
+	<cmath>
+	"MathUtil.hh"
+	"Floorplan.hh"
+
+1345412168 c:\users\charles lu\documents\mygit\2012s_fpproject\floorplangit\mathutil.hh
+	<iostream>
+
+1345439289 c:\users\charles lu\documents\mygit\2012s_fpproject\floorplangit\floorplan.hh
+	<string>
+	<iostream>
+	<map>
+
+1345412168 source:c:\users\charles lu\documents\mygit\2012s_fpproject\floorplangit\mathutil.cc
+	<cmath>
+	<climits>
+	<cstdlib>
+	"MathUtil.hh"
+
+1346873874 source:c:\users\charles lu\documents\mygit\2012s_fpproject\floorplangit\floorplan.cc
+	<stdlib.h>
+	<iostream>
+	<sstream>
+	<fstream>
+	<cmath>
+	<stdexcept>
+	"MathUtil.hh"
+	"Floorplan.hh"
+

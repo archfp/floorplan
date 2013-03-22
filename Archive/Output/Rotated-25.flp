@@ -1,0 +1,206 @@
+# FloorPlan output from ArchFP: UVA's Rapid Prototyping FloorPlanner.
+# Formatted for Input to HotSpot.
+# Line Format: <unit-name>\t<width>\t<height>\t<left-x>\t<bottom-y>
+# all dimensions are in meters
+# comment lines begin with a '#'
+# comments and empty lines are ignored
+
+# Start of Grid1 Layout.  There are 4 components in a 2 by 2 grid.
+# Total Grid Stats: X=0 Y=0 W=8mm H=8mm Area=64mm^2
+# Start of Cluster1 Layout.
+# Total Cluster Stats: X=0 Y=0 W=4mm H=4mm Area=16mm^2
+# Start of Cluster2 Layout.
+# Total Cluster Stats: X=0 Y=2 W=4mm H=2mm Area=8mm^2
+# Start of Cluster3 Layout.
+# Total Cluster Stats: X=0 Y=2 W=2mm H=2mm Area=4mm^2
+# Start of Cluster4 Layout.
+# Total Cluster Stats: X=0 Y=2 W=1mm H=2mm Area=2mm^2
+ 	0.001	0.0015	0	0.0025
+ 	0.001	0.0005	0	0.002
+# End of Cluster4 Layout.
+ 	0.001	0.0005	0.001	0.0035
+ 	0.001	0.0015	0.001	0.002
+# End of Cluster3 Layout.
+# Start of Cluster5 Layout.
+# Total Cluster Stats: X=2 Y=2 W=2mm H=2mm Area=4mm^2
+# Start of Cluster6 Layout.
+# Total Cluster Stats: X=2 Y=3 W=2mm H=1mm Area=2mm^2
+ 	0.0015	0.001	0.002	0.003
+ 	0.0005	0.001	0.0035	0.003
+# End of Cluster6 Layout.
+ 	0.0005	0.001	0.002	0.002
+ 	0.0015	0.001	0.0025	0.002
+# End of Cluster5 Layout.
+# End of Cluster2 Layout.
+# Start of Cluster7 Layout.
+# Total Cluster Stats: X=0 Y=0 W=4mm H=2mm Area=8mm^2
+# Start of Cluster8 Layout.
+# Total Cluster Stats: X=2 Y=0 W=2mm H=2mm Area=4mm^2
+# Start of Cluster9 Layout.
+# Total Cluster Stats: X=3 Y=0 W=1mm H=2mm Area=2mm^2
+ 	0.001	0.0015	0.003	0
+ 	0.001	0.0005	0.003	0.0015
+# End of Cluster9 Layout.
+ 	0.001	0.0005	0.002	0
+ 	0.001	0.0015	0.002	0.0005
+# End of Cluster8 Layout.
+# Start of Cluster10 Layout.
+# Total Cluster Stats: X=0 Y=0 W=2mm H=2mm Area=4mm^2
+# Start of Cluster11 Layout.
+# Total Cluster Stats: X=0 Y=0 W=2mm H=1mm Area=2mm^2
+ 	0.0015	0.001	0.0005	0
+ 	0.0005	0.001	0	0
+# End of Cluster11 Layout.
+ 	0.0005	0.001	0.0015	0.001
+ 	0.0015	0.001	0	0.001
+# End of Cluster10 Layout.
+# End of Cluster7 Layout.
+# End of Cluster1 Layout.
+# Start of Cluster12 Layout.
+# Total Cluster Stats: X=4 Y=0 W=4mm H=4mm Area=16mm^2
+# Start of Cluster13 Layout.
+# Total Cluster Stats: X=4 Y=2 W=4mm H=2mm Area=8mm^2
+# Start of Cluster14 Layout.
+# Total Cluster Stats: X=4 Y=2 W=2mm H=2mm Area=4mm^2
+# Start of Cluster15 Layout.
+# Total Cluster Stats: X=4 Y=2 W=1mm H=2mm Area=2mm^2
+ 	0.001	0.0015	0.004	0.0025
+ 	0.001	0.0005	0.004	0.002
+# End of Cluster15 Layout.
+ 	0.001	0.0005	0.005	0.0035
+ 	0.001	0.0015	0.005	0.002
+# End of Cluster14 Layout.
+# Start of Cluster16 Layout.
+# Total Cluster Stats: X=6 Y=2 W=2mm H=2mm Area=4mm^2
+# Start of Cluster17 Layout.
+# Total Cluster Stats: X=6 Y=3 W=2mm H=1mm Area=2mm^2
+ 	0.0015	0.001	0.006	0.003
+ 	0.0005	0.001	0.0075	0.003
+# End of Cluster17 Layout.
+ 	0.0005	0.001	0.006	0.002
+ 	0.0015	0.001	0.0065	0.002
+# End of Cluster16 Layout.
+# End of Cluster13 Layout.
+# Start of Cluster18 Layout.
+# Total Cluster Stats: X=4 Y=0 W=4mm H=2mm Area=8mm^2
+# Start of Cluster19 Layout.
+# Total Cluster Stats: X=6 Y=0 W=2mm H=2mm Area=4mm^2
+# Start of Cluster20 Layout.
+# Total Cluster Stats: X=7 Y=0 W=1mm H=2mm Area=2mm^2
+ 	0.001	0.0015	0.007	0
+ 	0.001	0.0005	0.007	0.0015
+# End of Cluster20 Layout.
+ 	0.001	0.0005	0.006	0
+ 	0.001	0.0015	0.006	0.0005
+# End of Cluster19 Layout.
+# Start of Cluster21 Layout.
+# Total Cluster Stats: X=4 Y=0 W=2mm H=2mm Area=4mm^2
+# Start of Cluster22 Layout.
+# Total Cluster Stats: X=4 Y=0 W=2mm H=1mm Area=2mm^2
+ 	0.0015	0.001	0.0045	0
+ 	0.0005	0.001	0.004	0
+# End of Cluster22 Layout.
+ 	0.0005	0.001	0.0055	0.001
+ 	0.0015	0.001	0.004	0.001
+# End of Cluster21 Layout.
+# End of Cluster18 Layout.
+# End of Cluster12 Layout.
+# Start of Cluster23 Layout.
+# Total Cluster Stats: X=0 Y=4 W=4mm H=4mm Area=16mm^2
+# Start of Cluster24 Layout.
+# Total Cluster Stats: X=0 Y=6 W=4mm H=2mm Area=8mm^2
+# Start of Cluster25 Layout.
+# Total Cluster Stats: X=0 Y=6 W=2mm H=2mm Area=4mm^2
+# Start of Cluster26 Layout.
+# Total Cluster Stats: X=0 Y=6 W=1mm H=2mm Area=2mm^2
+ 	0.001	0.0015	0	0.0065
+ 	0.001	0.0005	0	0.006
+# End of Cluster26 Layout.
+ 	0.001	0.0005	0.001	0.0075
+ 	0.001	0.0015	0.001	0.006
+# End of Cluster25 Layout.
+# Start of Cluster27 Layout.
+# Total Cluster Stats: X=2 Y=6 W=2mm H=2mm Area=4mm^2
+# Start of Cluster28 Layout.
+# Total Cluster Stats: X=2 Y=7 W=2mm H=1mm Area=2mm^2
+ 	0.0015	0.001	0.002	0.007
+ 	0.0005	0.001	0.0035	0.007
+# End of Cluster28 Layout.
+ 	0.0005	0.001	0.002	0.006
+ 	0.0015	0.001	0.0025	0.006
+# End of Cluster27 Layout.
+# End of Cluster24 Layout.
+# Start of Cluster29 Layout.
+# Total Cluster Stats: X=0 Y=4 W=4mm H=2mm Area=8mm^2
+# Start of Cluster30 Layout.
+# Total Cluster Stats: X=2 Y=4 W=2mm H=2mm Area=4mm^2
+# Start of Cluster31 Layout.
+# Total Cluster Stats: X=3 Y=4 W=1mm H=2mm Area=2mm^2
+ 	0.001	0.0015	0.003	0.004
+ 	0.001	0.0005	0.003	0.0055
+# End of Cluster31 Layout.
+ 	0.001	0.0005	0.002	0.004
+ 	0.001	0.0015	0.002	0.0045
+# End of Cluster30 Layout.
+# Start of Cluster32 Layout.
+# Total Cluster Stats: X=0 Y=4 W=2mm H=2mm Area=4mm^2
+# Start of Cluster33 Layout.
+# Total Cluster Stats: X=0 Y=4 W=2mm H=1mm Area=2mm^2
+ 	0.0015	0.001	0.0005	0.004
+ 	0.0005	0.001	0	0.004
+# End of Cluster33 Layout.
+ 	0.0005	0.001	0.0015	0.005
+ 	0.0015	0.001	0	0.005
+# End of Cluster32 Layout.
+# End of Cluster29 Layout.
+# End of Cluster23 Layout.
+# Start of Cluster34 Layout.
+# Total Cluster Stats: X=4 Y=4 W=4mm H=4mm Area=16mm^2
+# Start of Cluster35 Layout.
+# Total Cluster Stats: X=4 Y=6 W=4mm H=2mm Area=8mm^2
+# Start of Cluster36 Layout.
+# Total Cluster Stats: X=4 Y=6 W=2mm H=2mm Area=4mm^2
+# Start of Cluster37 Layout.
+# Total Cluster Stats: X=4 Y=6 W=1mm H=2mm Area=2mm^2
+ 	0.001	0.0015	0.004	0.0065
+ 	0.001	0.0005	0.004	0.006
+# End of Cluster37 Layout.
+ 	0.001	0.0005	0.005	0.0075
+ 	0.001	0.0015	0.005	0.006
+# End of Cluster36 Layout.
+# Start of Cluster38 Layout.
+# Total Cluster Stats: X=6 Y=6 W=2mm H=2mm Area=4mm^2
+# Start of Cluster39 Layout.
+# Total Cluster Stats: X=6 Y=7 W=2mm H=1mm Area=2mm^2
+ 	0.0015	0.001	0.006	0.007
+ 	0.0005	0.001	0.0075	0.007
+# End of Cluster39 Layout.
+ 	0.0005	0.001	0.006	0.006
+ 	0.0015	0.001	0.0065	0.006
+# End of Cluster38 Layout.
+# End of Cluster35 Layout.
+# Start of Cluster40 Layout.
+# Total Cluster Stats: X=4 Y=4 W=4mm H=2mm Area=8mm^2
+# Start of Cluster41 Layout.
+# Total Cluster Stats: X=6 Y=4 W=2mm H=2mm Area=4mm^2
+# Start of Cluster42 Layout.
+# Total Cluster Stats: X=7 Y=4 W=1mm H=2mm Area=2mm^2
+ 	0.001	0.0015	0.007	0.004
+ 	0.001	0.0005	0.007	0.0055
+# End of Cluster42 Layout.
+ 	0.001	0.0005	0.006	0.004
+ 	0.001	0.0015	0.006	0.0045
+# End of Cluster41 Layout.
+# Start of Cluster43 Layout.
+# Total Cluster Stats: X=4 Y=4 W=2mm H=2mm Area=4mm^2
+# Start of Cluster44 Layout.
+# Total Cluster Stats: X=4 Y=4 W=2mm H=1mm Area=2mm^2
+ 	0.0015	0.001	0.0045	0.004
+ 	0.0005	0.001	0.004	0.004
+# End of Cluster44 Layout.
+ 	0.0005	0.001	0.0055	0.005
+ 	0.0015	0.001	0.004	0.005
+# End of Cluster43 Layout.
+# End of Cluster40 Layout.
+# End of Cluster34 Layout.
+# End of Grid1 Layout.

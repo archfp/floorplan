@@ -1,0 +1,40 @@
+# FloorPlan output from ArchFP: UVA's Rapid Prototyping FloorPlanner.
+# Formatted for Input to HotSpot.
+# Line Format: <unit-name>\t<width>\t<height>\t<left-x>\t<bottom-y>
+# all dimensions are in meters
+# comment lines begin with a '#'
+# comments and empty lines are ignored
+
+# Start of Cluster1 Layout.
+# Total Cluster Stats: X=0 Y=0 W=nanmm H=nanmm Area=nanmm^2
+ 	nan	0	0	0
+ 	nan	0	nan	0
+ 	nan	0	nan	nan
+ 	nan	0	nan	0
+# Start of Cluster2 Layout.
+# Total Cluster Stats: X=nan Y=nan W=nanmm H=nanmm Area=nanmm^2
+# Start of Group1 layout.
+# Total Group Stats: X=nan Y=nan W=nanmm H=nanmm Area=0mm^2
+# End of Group1 Layout.
+# Start of Group2 layout.
+# Total Group Stats: X=nan Y=nan W=nanmm H=nanmm Area=0mm^2
+# End of Group2 Layout.
+ 	nan	0	nan	nan
+# End of Cluster2 Layout.
+# Start of Cluster3 Layout.
+# Total Cluster Stats: X=nan Y=nan W=nanmm H=nanmm Area=nanmm^2
+# Start of Group3 layout.
+# Total Group Stats: X=nan Y=nan W=nanmm H=nanmm Area=0mm^2
+# End of Group3 Layout.
+# Start of Group4 layout.
+# Total Group Stats: X=nan Y=nan W=nanmm H=nanmm Area=0mm^2
+# End of Group4 Layout.
+ 	nan	0	nan	nan
+# End of Cluster3 Layout.
+# Start of Grid1 Layout.  There are 3 components in a 1 by 3 grid.
+# Total Grid Stats: X=nan Y=nan W=nanmm H=0mm Area=nanmm^2
+ 	nan	0	nan	nan
+ 	nan	0	nan	nan
+ 	nan	0	nan	nan
+# End of Grid1 Layout.
+# End of Cluster1 Layout.

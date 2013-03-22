@@ -1,0 +1,77 @@
+Questions:
+
+Q1: How does the program detect that the component will not fit in the container?
+- Does it happen when targetWidth > remWidth || targetHeight > remHeight? 
+- Any boolean to detect?
+
+Q2:Why do we sort the components with the area in decreasing order? 
+(Floorplan.cc 499) 
+- So far the examples only have 1 item for each bagLayout.
+- Bubble Sort is the sorting algorithm used here.
+
+Q3: What does recalcSize do?
+(Floorplan.cc 550)
+- The comment says "it goes through the layout components and find the containers width and height".
+- Potential answer: it sets the the new size for the bagLayout container after laying out all the components to the bagLayout.
+
+Q4: "print name" && "print comp->getName()" (gdb with String) for the component doesn't work properly.
+- We can only see the name of the container, but not the component.
+
+Q5: What is the relationship between newX/Y and curX/Y in geogLayout?
+- Guess: newX/Y is the position of the new component (the component that is being treated)
+- Guess: curX/Y is the position after laying out the old components
+
+Q6: Why do we compute nextX with compWidth when remWidth > remHeight or it is the last component in bagLayout? 
+(Floorplan.cc 522)
+- Otherwise, why do we compute nextY with compHeight?
+- the remWidth/Height is also calculated.
+
+Q7: Why is there no cerr for layout that cannot be accomplished in targetAR?
+A: The problem shows itself in the output.
+
+Observations:
+
+O1: ARInRange has the following functions:
+a) Verify the targetAR is in-between minAR and maxAR. 
+b) If exceeded, correct it to min or max.
+c) If AR and maxAR are of opposite sides of 1, swap the height and width and invert both maxAR and minAR.
+- Overall, it allows the program to verify the component is layed out within the acceptable AR range.
+- It's called only at FPCompWrapper::layout.
+- The size of the FPCompWrapper unit is then re-defined if there's a change in AR.
+
+O2: Comment 
+(Floorplan.cc 868)
+- "This assumes a component has an area.  For a container, it will not have an area until it gets layed out.:
+
+O3: Variable watches are sometimes not accurate for undeclared/initialized values.
+
+O4: remWidth and remHeight are always the arguments for recursion.
+- They represent the remaining dimensions of the current container.
+
+O5: (Floorplan.cc 904)
+- If the compHint is Left/Right, we put it based on horizontal coordinate.
+- If the compHint is Top/Bottom, we put it based on vertical coordinate.
+- The remWidth is substracted from Left/Right geogLayout components.
+- The remHeight is substracted from Top/Bottom geogLayout components.
+
+O6: The action of laying out is to set up the location of the components.
+
+O7: The action of adding components is to store them in a stack of components.
+
+O8: The coordinate (X/Y) indicates the BOTTOM-LEFT EDGE of the component.
+
+O9: If any of the coordinates (X/Y) are negative, the layout AR is impossible.
+O9-2: If the resulting area is different from the original, the layout AR is impossible.
+
+O10: If geogHint is Left/Right, targetHeight = remHeight. Then set the targetWidth to fit the area.
+O10-2 : If geogHint is Top/Bottom, targetWidth = remWidth. Then set the targetHeight to fit the area.
+
+Progress: 
+Define the ARRatio Error Detection Algorithm.
+Option 1 -- Shift curX/Y newX/Y after the AR got re-defined by the component's max/minAR.
+Option 2 -- Change the container AR so that the width/height of the component fits exactly (with geogHint).
+
+Let's try Option 2.
+In order to effectively detect the suggested container newAR, we are going to add a "newAR" field double variables to
+geogLayout. If there's an non-fitting issue with any components, re-layout with newAR.
+

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="84">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df name="FloorPlanGit" root=".">
+      <df name="130223 Optimized Output">
+      </df>
+      <df name="130223 Updated Output">
+      </df>
+      <df name="Archive">
+        <df name="130122 Updated Output">
+        </df>
+        <df name="130123 Output">
+        </df>
+        <df name="Flag Added">
+        </df>
+        <df name="Test Legalizing">
+        </df>
+        <df name="Test Non-Legalizing">
+        </df>
+      </df>
+      <df name="bin">
+        <df name="Debug">
+        </df>
+        <df name="Release">
+        </df>
+      </df>
+      <df name="obj">
+        <df name="Debug">
+        </df>
+        <df name="Release">
+        </df>
+      </df>
+      <df name="Optimized Output">
+      </df>
+      <df name="Original Output">
+      </df>
+      <in>Floorplan.cc</in>
+      <in>Floorplan.hh</in>
+      <in>Main.cc</in>
+      <in>MathUtil.cc</in>
+      <in>MathUtil.hh</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>ArchFP</executablePath>
+          <ccTool>
+            <incDir>
+              <pElem>/C:/Users/Charles Lu/Documents/My Git/2012S_FPProject/FloorPlanGit/c:/program files (x86)/codeblocks/mingw/lib/gcc/mingw32/4.4.1/include</pElem>
+              <pElem>/c:/program files (x86)/codeblocks/mingw/lib/gcc/mingw32/4.4.1/include/c++/ext</pElem>
+              <pElem>/c:/program files (x86)/codeblocks/mingw/lib/gcc/mingw32/4.4.1/include</pElem>
+              <pElem>/C:/Users/Charles Lu/Documents/My Git/2012S_FPProject/FloorPlanGit/c:/program files (x86)/codeblocks/mingw/lib/gcc/mingw32/4.4.1/include/c++/mingw32/bits</pElem>
+              <pElem>/c:/program files (x86)/codeblocks/mingw/lib/gcc/mingw32/4.4.1/include/c++/mingw32/bits</pElem>
+              <pElem>/c:/program files (x86)/codeblocks/mingw/lib/gcc/mingw32/4.4.1/include/c++/bits</pElem>
+              <pElem>/C:/Users/Charles Lu/Documents/My Git/2012S_FPProject/FloorPlanGit/c:/program files (x86)/codeblocks/mingw/lib/gcc/mingw32/4.4.1/include/c++/bits</pElem>
+              <pElem>/C:/Users/Charles Lu/Documents/My Git/2012S_FPProject/FloorPlanGit</pElem>
+              <pElem>/c:/program files (x86)/codeblocks/mingw/lib/gcc/mingw32/4.4.1/include/c++</pElem>
+              <pElem>/c:/program files (x86)/codeblocks/mingw/lib/gcc/mingw32/4.4.1/include/c++/debug</pElem>
+              <pElem>/C:/Users/Charles Lu/Documents/My Git/2012S_FPProject/FloorPlanGit/c:/program files (x86)/codeblocks/mingw/lib/gcc/mingw32/4.4.1/include/c++/ext</pElem>
+              <pElem>/C:/Users/Charles Lu/Documents/My Git/2012S_FPProject/FloorPlanGit/c:/program files (x86)/codeblocks/mingw/lib/gcc/mingw32/4.4.1/include/c++/debug</pElem>
+              <pElem>/C:/Users/Charles Lu/Documents/My Git/2012S_FPProject/FloorPlanGit/C:/Users/Charles Lu/Documents/My Git/2012S_FPProject/FloorPlanGit</pElem>
+              <pElem>/C:/Users/Charles Lu/Documents/My Git/2012S_FPProject/FloorPlanGit/c:/program files (x86)/codeblocks/mingw/lib/gcc/mingw32/4.4.1/include/c++</pElem>
+              <pElem>/C:/Users/Charles Lu/Documents/My Git/2012S_FPProject/FloorPlanGit/c:/program files (x86)/codeblocks/mingw/include</pElem>
+              <pElem>/c:/program files (x86)/codeblocks/mingw/include</pElem>
+            </incDir>
+          </ccTool>
+        </makeTool>
+      </makefileType>
+    </conf>
+  </confs>
+</configurationDescriptor>

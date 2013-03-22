@@ -1,0 +1,117 @@
+Floorplan.cc
+
+*** Constructors ***
+-- FPObject --
+// The top level of all possible objects?
+FPObject::FPObject()
+
+-- dummyComponent --
+/* Help with some IO */
+dummyComponent::dummyComponent (ComponentType typeArg)
+dummyComponent::dummyComponent (string nameArg)
+FPCompWrapper::~FPCompWrapper()	//Destructor
+
+-- FPCompWrapper --
+/* These are two different ways at initializing the FPCompWrapper */
+// The first one uses a dummy component with the conditions: min/maxAR, area and amount of components.
+FPCompWrapper::FPCompWrapper(dummyComponent* comp, double minAR, double maxAR, double areaArg, int countArg)
+// The second one is give a name that will be defined as a dummy component. Its location, size, AR, and count (1)
+   are all initialized.
+FPCompWrapper::FPCompWrapper(string nameArg, double xArg, double yArg, double widthArg, double heightArg)
+FPCompWrapper::~FPCompWrapper()	// Destructor
+
+-- FPContainer --
+FPContainer::FPContainer() 
+FPContainer::~FPContainer()	//Destructor
+
+-- gridLayout --
+gridLayout::gridLayout() : FPContainer()
+
+-- bagLayout --
+bagLayout::bagLayout() : FPContainer()
+
+-- fixedLayout --
+fixedLayout::fixedLayout(const char * filename, double scalingFactor) : bagLayout()
+
+-- geogLayout --
+geogLayout::geogLayout() : FPContainer()
+
+
+*** Functions ***
+void setNameMode(bool flag) // Enable or Disable printing the name in case the output is too messy
+ostream& operator<< (ostream& s, dummyComponent& c)
+
+ostream& outputHotSpotHeader(const char * filename)
+void outputHotSpotFooter(ostream& o)
+string getStringFromInt(int in)
+
+-- FPContainer --
+
+// Check whether we got a mirror image from the current container. 
+void FPContainer::pushMirrorContext(double startX, double startY)	// Add 1-level mirror
+void FPContainer::popMirrorContext()					// Remove 1-level mirror
+
+void FPContainer::addComponentAtIndex (FPObject * comp, int index)
+FPObject * FPContainer::removeComponentAtIndex (int index)
+void FPContainer::replaceComponent(FPObject * comp, int index)
+void FPContainer::addComponent (FPObject * comp)
+void FPContainer::addComponentToFront (FPObject * comp)
+void FPContainer::addComponent (FPObject * comp, int countArg)
+FPObject * FPContainer::removeComponent (int index)	//Same as removeComponentAtIndex
+
+// Adding Cluster with ComponentType or its name in string
+FPObject * FPContainer::addComponentCluster (ComponentType type, int count, double area, double maxAspectRatio, double minAspectRatio)
+FPObject * FPContainer::addComponentCluster (string name, int count, double area, double maxAspectRatio, double minAspectRatio)
+
+void FPContainer::sortByArea()
+double FPContainer::totalArea()
+
+-- FPObject --
+
+// Calculate the zone of the grid/group/cluster considering the mirror cases.
+// Q: Review how this is done
+inline double FPObject::calcX (double startX)
+inline double FPObject::calcY (double startY)
+
+// Set width, height and thus area of the FPObject
+void FPObject::setSize(double widthArg, double heightArg)
+
+// Set the coordinate of the FPObject
+void FPObject::setLocation(double xArg, double yArg)
+
+
+void FPObject::outputHotSpotLayout(ostream& o, double startX, double startY)
+
+-- dummyComponent --
+// print out the name of the component
+void dummyComponent::myPrint()
+
+-- FPCompWrapper --
+
+// 
+double FPCompWrapper::ARInRange(double AR)
+
+// Helper method used in ARInRange. Flip Height with Width. Inverted the min/max AR.
+void FPCompWrapper::flip()
+bool FPCompWrapper::layout(FPOptimization opt, double ratio)
+
+-- gridLayout --
+bool gridLayout::layout(FPOptimization opt, double targetAR)
+void gridLayout::outputHotSpotLayout(ostream& o, double startX, double startY)
+
+-- bagLayout --
+bool bagLayout::layout(FPOptimization opt, double targetAR)
+void bagLayout::recalcSize()
+void bagLayout::outputHotSpotLayout(ostream& o, double startX, double startY)
+
+-- fixedLayout --
+void fixedLayout::morph(double xFactor, double yFactor)
+bool fixedLayout::layout(FPOptimization opt, double targetAR)
+
+-- geogLayout --
+void geogLayout::addComponent (FPObject * comp, int count, GeographyHint hint)
+FPObject * geogLayout::addComponentCluster (ComponentType type, int count, double area, double maxARArg, double minARArg, GeographyHint hint)
+FPObject * geogLayout::addComponentCluster (string name, int count, double area, double maxARArg, double minARArg, GeographyHint hint)
+bool geogLayout::layout(FPOptimization opt, double targetAR)
+bool geogLayout::layoutHelper(double remWidth, double remHeight, double curX, double curY, FPObject ** layoutStack, int curDepth, FPObject ** centerItems, int centerItemsCount)
+void geogLayout::outputHotSpotLayout(ostream& o, double startX, double startY)

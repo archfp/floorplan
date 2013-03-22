@@ -1,0 +1,9 @@
+{A, B, C, D}
+Put A in list.
+{A}
+Compare B to A.
+Xa + Xb < Xa + Wa &&
+{A, B}
+Compare C to A, B.
+
+Look for Python for shell-scripting.

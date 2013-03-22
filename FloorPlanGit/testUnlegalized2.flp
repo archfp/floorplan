@@ -1,0 +1,18 @@
+# FloorPlan output from ArchFP: UVA's Rapid Prototyping FloorPlanner.
+# Formatted for Input to HotSpot.
+# Line Format: <unit-name>\t<width>\t<height>\t<left-x>\t<bottom-y>
+# all dimensions are in meters
+# comment lines begin with a '#'
+# comments and empty lines are ignored
+
+# Start of Cluster1 Layout.
+# Total Cluster Stats: X=0 Y=0 W=4.89898mm H=4.89898mm Area=24mm^2
+e11	0.00282843	0.00141421	0	0.00348477
+e21	0.00141421	0.00282843	0.00348477	0
+e31	0.00282843	0.00141421	0	0
+e41	0.00193185	0.00207055	0	0.00141421
+e51	0.000965926	0.00207055	0.00193185	0.00141421
+e52	0.000965926	0.00207055	0.00251884	0.00141421
+e61	0.000632456	0.00316228	0.00289778	0.00141421
+e62	0.000632456	0.00316228	0.00289778	0.000322488
+# End of Cluster1 Layout.
