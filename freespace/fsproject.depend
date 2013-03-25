@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1363200084 source:d:\freespace\fsproject\fsproject\freespace.cpp
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<fstream>
+	<string>
+	<iomanip>
+	<sstream>
+	<algorithm>
+	<fstream>
+	"subbox.h"
+	"mathmethod.h"
+
+1362980168 d:\freespace\fsproject\fsproject\subbox.h
+
+1362981034 d:\freespace\fsproject\fsproject\mathmethod.h
+	"subbox.h"
+
