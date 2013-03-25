@@ -154,29 +154,15 @@ while (<FILE>) {
 			$coords[$i] = int($coords[$i] + $xorig);
 		}	
 	}
-	# Changed by GGF on 4/25/2012 to make lines of width 2.
-	printf("2 2 0 2 -1 7 0 0 -1 0.000 0 0 0 0 0 %d\n", int (@coords)/2);
+	printf("2 2 0 3 -1 7 0 0 -1 0.000 0 0 0 0 0 %d\n", int (@coords)/2);
 	print "\t@coords\n";
-	$xpos = int($xorig + ($leftx + $rightx + 0.5) / 2.0);
-	$ypos = int($maxy - (($bottomy + $topy + 0.5) / 2.0) - $yorig);
+	$xpos = int($xorig + ($leftx + $rightx) / 2.0);
+	$ypos = int($maxy - ($bottomy + $topy) / 2.0 - $yorig);
 	$angle = 0;
-	# Figure out if the text is vertical.
-	# If so, change the angle.
-	# Changed by GGF on 4/25/2012 to do the pos fixups.
-	# While we're at it, make the start positions take the font height into account.
-	if (($topy - $bottomy) > $skinny * ($rightx - $leftx))
-	{
-	    $angle = 1.5708;
-	    $xpos += int($res*($fontsize/288.0) + 0.5);
-	}
-	else
-	{
-	    $ypos += int($res*($fontsize/288.0) + 0.5);
-	}
+	$angle = 1.5708 if (($topy - $bottomy) > $skinny * ($rightx - $leftx));
 	$name = <FILE>;
 	chomp($name);
-	# Changed by GGF on 4/25/2012 to make font bold.
-	print "4 1 -1 0 0 2 $fontsize $angle 4 -1 -1 $xpos $ypos $name\\001\n";
+	print "4 1 -1 0 0 0 $fontsize $angle 4 -1 -1 $xpos $ypos $name\\001\n";
 }
 close(FILE);
 
