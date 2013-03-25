@@ -56,10 +56,14 @@ void generateErrorCase()
     fp1->addComponentCluster("eC", 1, 5.622, 3., 1., Center);
     fp1->addComponentCluster("eCMultEven", 6, 3.51357, 2., 1., Center);
     fp1->addComponentCluster("eCMultOdd", 9, 1.5336, 4., 1., Center);
+    
+    //Testcase 6 Re-add 180odd
+    fp1->addComponentCluster("eTB180odd", 7, 3.6222, 3., 1., TopBottom180);
+    fp1->addComponentCluster("eLR180odd", 3, 3.0519, 3., 1., LeftRight180);
 
-    fp1->layout(AspectRatio, 1.);
+    fp1->layout(AspectRatio, 1.5);
 
-    ostream& HSOut = outputHotSpotHeader("testCenter.flp");
+    ostream& HSOut = outputHotSpotHeader("tARdiff.flp");
     fp1->outputHotSpotLayout(HSOut);
     outputHotSpotFooter(HSOut);
 }
