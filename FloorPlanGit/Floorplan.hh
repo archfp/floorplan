@@ -96,6 +96,8 @@ protected:
     // The x,y values will be relative to the enclosing object.
     double x;                   // The location in the container.  0.0 is on the left.
     double y;                   // The location in the container.  0.0 is on the bottom.
+    double xc;
+    double yc;
     double width;               // The width of the component in millimeters.
     double height;              // The height of the component in millimeters.
     double area;                // The area of the component in sq millimeters.
@@ -119,6 +121,8 @@ public:
     // Allow anyone to get the values of things.
     virtual double        getX()      { return x; }
     virtual double        getY()      { return y; }
+    virtual double        getXc()     { return xc; }
+    virtual double        getYc()     { return yc; }
     virtual double        getWidth()  { return width; }
     virtual double        getHeight() { return height; }
     virtual double        getArea()   { return area; }
@@ -145,6 +149,7 @@ public:
     virtual void          setSize(double widthArg, double heightArg);
     virtual void          setLocation(double xArg, double yArg);
     virtual bool          setState(bool newState) { return state = newState; }
+    virtual void          setCenter(double xcArg, double ycArg);
 
     virtual bool          layout (FPOptimization opt, double targetAR =  1.0) = 0;
     virtual void          outputHotSpotLayout(ostream& o, double startX = 0.0, double startY = 0.0);
@@ -199,6 +204,7 @@ class FPContainer : public FPObject {
     // In this way, we can maintain proper refcounts that can tell us
     //    when things can be deleted.
     int itemCount;
+    double wireLength;
     FPObject ** items;
     //double newAR;
     void       addComponentAtIndex (FPObject * comp, int index);
@@ -241,6 +247,8 @@ public:
     virtual void           addComponent (FPObject * comp, int count);
     
     virtual bool           detectOverlap(FPObject ** layoutStack, int curDepth, FPObject * FPLayout);
+    virtual double         getWireLength() { return wireLength; }
+    virtual void           calcWireLength(FPObject ** layoutStack, int count);
 };
 
 // This will just be a collection of components to lay out in the given aspect ratio.

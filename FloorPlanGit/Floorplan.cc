@@ -32,6 +32,8 @@ bool topBottomInversion = true; // TopBottom items can be inverted to BottomTop 
 bool checkOverlap = true; // Overlap detection 
 double expandHeight = 0, expandWidth = 0; //Overlap area expansion
 
+bool wiring = true; // Wire length calculation
+
 // Temporary local for crazy mirror reflection stuff.
 #define maxMirrorDepth 50
 static bool xReflect = false;
@@ -143,6 +145,8 @@ void dummyComponent::myPrint() {
 FPObject::FPObject() {
     x = 0.0;
     y = 0.0;
+    xc = 0.0;
+    yc = 0.0;
     width = 0.0;
     height = 0.0;
     area = 0.0;
@@ -163,6 +167,11 @@ void FPObject::setSize(double widthArg, double heightArg) {
 void FPObject::setLocation(double xArg, double yArg) {
     x = xArg;
     y = yArg;
+}
+
+void FPObject::setCenter(double xcArg, double ycArg) {
+    xc = xcArg;
+    yc = ycArg;
 }
 
 //Q: Why is there a case where one doesn't print the name?
@@ -774,7 +783,7 @@ bool geogLayout::layout(FPOptimization opt, double targetAR) {
   
     } while (!retval && retryCount < maxRetry);
 
-    cout << "retryCount = " << retryCount << "\n";
+    if (verbose && legalizing) cout << "retryCount = " << retryCount << " times\n";
     
     // By now, the item list should be empty.
     if (getComponentCount() != 0) {
@@ -797,6 +806,10 @@ bool geogLayout::layout(FPOptimization opt, double targetAR) {
     }
     area = width * height;
     expandHeight = 0; expandWidth = 0;
+    
+    // Now calculate the wire length
+    if (wiring) calcWireLength(layoutStack, maxArraySize);
+    if (verbose && wiring) cout << "wireLength = " << getWireLength() << " mm\n";
 
     free(centerItems);
     free(layoutStack);
@@ -1023,6 +1036,7 @@ bool geogLayout::layoutHelper(double remWidth, double remHeight, double curX, do
         }
 
         FPLayout->setLocation(curX, curY);
+        if (wiring) FPLayout->setCenter(curX + (FPLayout->getWidth()/2), curY + (FPLayout->getHeight()/2));
         // Put the layout on the stack.
         layoutStack[curDepth] = FPLayout;
 
@@ -1034,11 +1048,10 @@ bool geogLayout::layoutHelper(double remWidth, double remHeight, double curX, do
         // If overlap is detected, we have two options:
         // 1. Re-layout in different orders
         // 2. Look for deadspace and try to fit in (if can't find anything fit, we re-layout.
-        
-        
+               
         // Overlap detection O(N^2) for now
         if (legalizing && checkOverlap && curDepth > 0) detectOverlap(layoutStack, curDepth, FPLayout);
-
+        
         try {
             layoutHelper(remWidth, remHeight, newX, newY, layoutStack, curDepth + 1, centerItems, centerItemsCount);
             //if (!retval) return false;
@@ -1134,6 +1147,21 @@ bool FPContainer::detectOverlap(FPObject ** layoutStack, int curDepth, FPObject 
     }
     
     return true;
+}
+
+void FPContainer::calcWireLength(FPObject ** layoutStack, int count) {    
+    double totalWireLength = 0;
+    for (int i = 0; i <= count; i++) {
+        FPObject * comp1 = layoutStack[i];
+        if (!comp1) break;       
+        for (int j = i+1; j < count; j++) {
+            FPObject * comp2 = layoutStack[j];
+            if (!comp2) break;
+            totalWireLength += abs(comp1->getXc() - comp2->getXc()) + abs(comp1->getYc() - comp2->getYc());
+        }
+    }
+    
+    wireLength = totalWireLength;
 }
 
 

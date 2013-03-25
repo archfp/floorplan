@@ -60,7 +60,8 @@ void generateErrorCase()
     //Testcase 6 Re-add 180odd
     fp1->addComponentCluster("eTB180odd", 7, 3.6222, 3., 1., TopBottom180);
     fp1->addComponentCluster("eLR180odd", 3, 3.0519, 3., 1., LeftRight180);
-
+    
+    //Testcase 7 AR Variation
     fp1->layout(AspectRatio, 1.5);
 
     ostream& HSOut = outputHotSpotHeader("tARdiff.flp");
