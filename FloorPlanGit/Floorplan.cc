@@ -783,7 +783,7 @@ bool geogLayout::layout(FPOptimization opt, double targetAR) {
   
     } while (!retval && retryCount < maxRetry);
 
-    if (verbose && legalizing) cout << "retryCount = " << retryCount << " times\n";
+    if (verbose && legalizing) cout << "retryCount = " << retryCount << " time(s)\n";
     
     // By now, the item list should be empty.
     if (getComponentCount() != 0) {

@@ -33,38 +33,38 @@ void generateErrorCase()
     fp1->addComponentCluster("eT1", 1, 4, 3., 1., Top);
     
     //Testcase 2.1 LeftRight/TopBottom with odd count
-    fp1->addComponentCluster("eLRodd", 3, 9, 5., 1., LeftRight);
-    fp1->addComponentCluster("eTBodd", 5, 9, 3., 1., TopBottom);
+    //fp1->addComponentCluster("eLRodd", 3, 9, 5., 1., LeftRight);
+    //fp1->addComponentCluster("eTBodd", 5, 9, 3., 1., TopBottom);
     
     //Testcase 3 Mirror
-    fp1->addComponentCluster("eLRMeven", 2, 11, 5., 1., LeftRightMirror);
-    fp1->addComponentCluster("eTBMeven", 2, 11, 5., 1., TopBottomMirror);
+    //fp1->addComponentCluster("eLRMeven", 2, 11, 5., 1., LeftRightMirror);
+    //fp1->addComponentCluster("eTBMeven", 2, 11, 5., 1., TopBottomMirror);
     
     //Testcase 3.1 Mirror odd count
-    fp1->addComponentCluster("eTBMeven", 3, 7, 4., 1., TopBottomMirror);
-    fp1->addComponentCluster("eLRMeven", 7, 4, 3., 1., TopBottomMirror);
+    //fp1->addComponentCluster("eTBMeven", 3, 7, 4., 1., TopBottomMirror);
+    //fp1->addComponentCluster("eLRMeven", 7, 4, 3., 1., TopBottomMirror);
     
     //Testcase 4 180
-    fp1->addComponentCluster("eLR180even", 6, 8.99, 3., 1., LeftRight180);
-    fp1->addComponentCluster("eTB180even", 4, 11.949, 3., 1., TopBottom180);
+    //fp1->addComponentCluster("eLR180even", 6, 8.99, 3., 1., LeftRight180);
+    //fp1->addComponentCluster("eTB180even", 4, 11.949, 3., 1., TopBottom180);
     
     //Testcase 4.1 180 odd count
-    fp1->addComponentCluster("eTB180odd", 3, 3.15033, 2., 1., TopBottom180);
-    fp1->addComponentCluster("eLR180odd", 5, 3.94114, 2., 1., LeftRight180);
+    //fp1->addComponentCluster("eTB180odd", 3, 3.15033, 2., 1., TopBottom180);
+    //fp1->addComponentCluster("eLR180odd", 5, 3.94114, 2., 1., LeftRight180);
     
     //Testcase 5 Center
-    fp1->addComponentCluster("eC", 1, 5.622, 3., 1., Center);
-    fp1->addComponentCluster("eCMultEven", 6, 3.51357, 2., 1., Center);
-    fp1->addComponentCluster("eCMultOdd", 9, 1.5336, 4., 1., Center);
+    //fp1->addComponentCluster("eC", 1, 5.622, 3., 1., Center);
+    //fp1->addComponentCluster("eCMultEven", 6, 3.51357, 2., 1., Center);
+    //fp1->addComponentCluster("eCMultOdd", 9, 1.5336, 4., 1., Center);
     
     //Testcase 6 Re-add 180odd
-    fp1->addComponentCluster("eTB180odd", 7, 3.6222, 3., 1., TopBottom180);
-    fp1->addComponentCluster("eLR180odd", 3, 3.0519, 3., 1., LeftRight180);
+    //fp1->addComponentCluster("eTB180odd", 7, 3.6222, 3., 1., TopBottom180);
+    //fp1->addComponentCluster("eLR180odd", 3, 3.0519, 3., 1., LeftRight180);
     
     //Testcase 7 AR Variation
-    fp1->layout(AspectRatio, 1.5);
+    fp1->layout(AspectRatio, 1.0);
 
-    ostream& HSOut = outputHotSpotHeader("tARdiff.flp");
+    ostream& HSOut = outputHotSpotHeader("testDoubleWire.flp");
     fp1->outputHotSpotLayout(HSOut);
     outputHotSpotFooter(HSOut);
 }

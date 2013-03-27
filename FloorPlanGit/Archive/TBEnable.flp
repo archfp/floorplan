@@ -1,0 +1,32 @@
+# FloorPlan output from ArchFP: UVA's Rapid Prototyping FloorPlanner.
+# Formatted for Input to HotSpot.
+# Line Format: <unit-name>\t<width>\t<height>\t<left-x>\t<bottom-y>
+# all dimensions are in meters
+# comment lines begin with a '#'
+# comments and empty lines are ignored
+
+# Start of Cluster1 Layout.
+# Total Cluster Stats: X=0 Y=0 W=14.7486mm H=13.8042mm Area=203.592mm^2
+e11	0.0011547	0.0034641	0.0135939	0
+e21	0.0011547	0.0034641	0.0124392	0
+e31	0.00141421	0.00707107	0	0
+e32	0.00141421	0.00707107	0.011025	0
+e41	0.00707107	0.00141421	0.00141421	0
+e42	0.00707107	0.00141421	0.00141421	0.0123899
+e51	0.0034641	0.0011547	0.00141421	0.00141421
+e61	0.0034641	0.0011547	0.00141421	0.00256891
+# Start of Grid1 Layout.  There are 3 components in a 1 by 3 grid.
+# Total Grid Stats: X=1.41421 Y=3.72361 W=3.11551mm H=8.66632mm Area=27mm^2
+e71	0.00311551	0.00288877	0.00141421	0.00372361
+e72	0.00311551	0.00288877	0.00141421	0.00661239
+e73	0.00311551	0.00288877	0.00141421	0.00950116
+# End of Grid1 Layout.
+# Start of Grid2 Layout.  There are 5 components in a 1 by 5 grid.
+# Total Grid Stats: X=4.52972 Y=3.72361 W=5.19615mm H=8.66025mm Area=45mm^2
+e81	0.00519615	0.00173205	0.00452972	0.00372361
+e82	0.00519615	0.00173205	0.00452972	0.00545567
+e83	0.00519615	0.00173205	0.00452972	0.00718772
+e84	0.00519615	0.00173205	0.00452972	0.00891977
+e85	0.00519615	0.00173205	0.00452972	0.0106518
+# End of Grid2 Layout.
+# End of Cluster1 Layout.
