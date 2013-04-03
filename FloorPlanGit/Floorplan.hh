@@ -239,6 +239,7 @@ public:
     // return a bool to indicate success or failure.
     virtual bool           layout (FPOptimization opt, double targetAR =  1.0) = 0;
     virtual void           outputHotSpotLayout(ostream& o, double startX = 0.0, double startY = 0.0) = 0;
+            void           outputWireLength(ostream& o);
 
     // Ways to add components.
     virtual FPObject *     addComponentCluster (ComponentType type, int count, double area, double maxARArg, double minARArg);

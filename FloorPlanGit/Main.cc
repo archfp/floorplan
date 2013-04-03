@@ -66,6 +66,7 @@ void generateErrorCase()
 
     ostream& HSOut = outputHotSpotHeader("testDoubleWire.flp");
     fp1->outputHotSpotLayout(HSOut);
+    fp1->outputWireLength(HSOut);
     outputHotSpotFooter(HSOut);
 }
     

@@ -809,7 +809,7 @@ bool geogLayout::layout(FPOptimization opt, double targetAR) {
     
     // Now calculate the wire length
     if (wiring) calcWireLength(layoutStack, maxArraySize);
-    if (verbose && wiring) cout << "wireLength = " << getWireLength() << " mm\n";
+    if (verbose && wiring) cout << "totalWireLength = " << getWireLength() << " mm\n";
 
     free(centerItems);
     free(layoutStack);
@@ -1151,13 +1151,20 @@ bool FPContainer::detectOverlap(FPObject ** layoutStack, int curDepth, FPObject 
 
 void FPContainer::calcWireLength(FPObject ** layoutStack, int count) {    
     double totalWireLength = 0;
+    double thisWireLength = 0;
     for (int i = 0; i <= count; i++) {
         FPObject * comp1 = layoutStack[i];
         if (!comp1) break;       
         for (int j = i+1; j < count; j++) {
             FPObject * comp2 = layoutStack[j];
             if (!comp2) break;
-            totalWireLength += abs(comp1->getXc() - comp2->getXc()) + abs(comp1->getYc() - comp2->getYc());
+            thisWireLength = abs(comp1->getXc() - comp2->getXc()) + abs(comp1->getYc() - comp2->getYc());
+            totalWireLength += thisWireLength;
+            if (verbose) cout << comp1->getUniqueName() << " is connected to " << comp2->getUniqueName()
+                              << " from (" << comp1->getXc() << ", " << comp1->getYc() << ") to ("
+                              << comp2->getXc() << ", " << comp2->getYc() << ")"
+                              << " with the distance = " << thisWireLength << " mm\n";
+                              
         }
     }
     
@@ -1190,6 +1197,10 @@ Legalize::Legalize() {
     rightMark = true;
 }
 */
+
+void FPContainer::outputWireLength(ostream& o) {
+    o << "# Total Wire Length: " << getWireLength() << " mm\n";
+}
 
 // Output Helpers.
 
