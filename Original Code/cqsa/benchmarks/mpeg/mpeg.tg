@@ -1,0 +1,52 @@
+define computation
+
+bsp 10
+volp 10
+vld 192
+shpe 17
+motn 192
+txtr1 128
+txtr2 128
+rcns 119
+pad 164
+dblk 102
+drng1 250
+drng2 250
+
+vbv 32
+vcv1 25
+vcv2 37
+vcv3 75
+vmv 223
+
+end
+
+define communication
+
+bsp vbv 48
+vbv volp 48
+volp vbv 48
+vbv vld 48
+vld vcv1 2228
+vcv1 shpe 1272
+vcv1 motn 1352
+vcv1 txtr1 704
+vcv1 txtr2 704
+shpe vcv2 1041
+motn vcv2 1106
+txtr1 vcv2 575
+txtr2 vcv2 575
+vcv2 rcns 3299
+vcv2 pad 1041
+rcns vcv3 5734
+vcv3 pad 9518
+pad vmv 7788
+vmv rcns 5734
+vmv dblk 8389
+vmv drng1 15670
+vmv drng2 15670
+dblk vmv 5025
+drng1 vmv 12080
+drng2 vmv 12080
+
+end

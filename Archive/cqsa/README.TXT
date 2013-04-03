@@ -1,1 +1,0 @@
-Please see cqsa.pdf for installation and usage instructions.

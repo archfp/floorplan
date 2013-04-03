@@ -1,0 +1,104 @@
+define computation
+
+bsp 52
+volp 52
+vld1 500
+vld2 500
+shpe 68
+motn1 192
+motn2 192
+motn3 192
+motn4 192
+txtr1 241
+txtr2 242
+txtr3 241
+txtr4 242
+txtr5 241
+txtr6 242
+rcns1 238
+rcns2 238
+pad1 218
+pad2 219
+pad3 219
+dblk1 204
+dblk2 204
+drng1 250
+drng2 250
+drng3 250
+drng4 250
+drng5 250
+drng6 250
+drng7 250
+drng8 250
+
+vbv 160
+vcv1 100
+vcv2 150
+vcv3 300
+vmv 892
+
+end
+
+define communication
+
+bsp vbv 250
+vbv volp 250
+volp vld1 250
+vld1 vld2 11604
+vld2 vcv1 11604
+vcv1 shpe 5088
+vcv1 motn1 1352
+vcv1 motn2 1352
+vcv1 motn3 1352
+vcv1 motn4 1352
+vcv1 txtr1 938
+vcv1 txtr2 939
+vcv1 txtr3 938
+vcv1 txtr4 939
+vcv1 txtr5 938
+vcv1 txtr6 939
+shpe vcv2 4164
+motn1 vcv2 1106
+motn2 vcv2 1106
+motn3 vcv2 1106
+motn4 vcv2 1106
+txtr1 vcv2 768
+txtr2 vcv2 768
+txtr3 vcv2 768
+txtr4 vcv2 768
+txtr5 vcv2 768
+txtr6 vcv2 768
+vcv2 rcns1 6598
+vcv2 rcns2 6598
+rcns1 vcv3 11468
+rcns2 vcv3 11468
+vcv3 pad1 11302
+vcv3 pad2 11303
+vcv3 pad3 11303
+pad1 vmv 10384
+pad2 vmv 10384
+pad3 vmv 10384
+vmv rcns1 11468
+vmv rcns2 11468
+vmv dblk1 16778
+vmv dblk2 16778
+vmv drng1 15670
+vmv drng2 15671
+vmv drng3 15670
+vmv drng4 15671
+vmv drng5 15670
+vmv drng6 15671
+vmv drng7 15670
+vmv drng8 15671
+dblk1 vmv 10050
+dblk2 vmv 10050
+drng1 vmv 12080
+drng2 vmv 12080
+drng3 vmv 12080
+drng4 vmv 12080
+drng5 vmv 12080
+drng6 vmv 12080
+drng7 vmv 12080
+drng8 vmv 12080
+
+end
