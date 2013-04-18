@@ -1,0 +1,108 @@
+UCLA nets   1.0
+
+
+NumNets : 34
+NumPins : 68
+
+NetDegree : 2  N0
+cpu-1 B : 	%0	 %0
+l2-1 B : 	%0	 %0
+NetDegree : 2  N1
+cpu-2 B : 	%0	 %0
+l2-2 B : 	%0	 %0
+NetDegree : 2  N2
+cpu-3 B : 	%0	 %0
+l2-3 B : 	%0	 %0
+NetDegree : 2  N3
+cpu-4 B : 	%0	 %0
+l2-4 B : 	%0	 %0
+NetDegree : 2  N4
+cpu-5 B : 	%0	 %0
+l2-5 B : 	%0	 %0
+NetDegree : 2  N5
+cpu-6 B : 	%0	 %0
+l2-6 B : 	%0	 %0
+NetDegree : 2  N6
+cpu-7 B : 	%0	 %0
+l2-7 B : 	%0	 %0
+NetDegree : 2  N7
+cpu-8 B : 	%0	 %0
+l2-8 B : 	%0	 %0
+NetDegree : 2  N8
+l2-1 B : 	%0	 %0
+noc-1 B : 	%0	 %0
+NetDegree : 2  N9
+l2-2 B : 	%0	 %0
+noc-2 B : 	%0	 %0
+NetDegree : 2  N10
+l2-3 B : 	%0	 %0
+noc-3 B : 	%0	 %0
+NetDegree : 2  N11
+l2-4 B : 	%0	 %0
+noc-4 B : 	%0	 %0
+NetDegree : 2  N12
+l2-5 B : 	%0	 %0
+noc-5 B : 	%0	 %0
+NetDegree : 2  N13
+l2-6 B : 	%0	 %0
+noc-6 B : 	%0	 %0
+NetDegree : 2  N14
+l2-7 B : 	%0	 %0
+noc-7 B : 	%0	 %0
+NetDegree : 2  N15
+l2-8 B : 	%0	 %0
+noc-8 B : 	%0	 %0
+NetDegree : 2  N16
+noc-1 B : 	%0	 %0
+mc-5 B : 	%0	 %0
+NetDegree : 2  N17
+noc-1 B : 	%0	 %0
+noc-5 B : 	%0	 %0
+NetDegree : 2  N18
+noc-1 B : 	%0	 %0
+noc-2 B : 	%0	 %0
+NetDegree : 2  N19
+noc-2 B : 	%0	 %0
+mc-6 B : 	%0	 %0
+NetDegree : 2  N20
+noc-2 B : 	%0	 %0
+noc-6 B : 	%0	 %0
+NetDegree : 2  N21
+noc-2 B : 	%0	 %0
+noc-3 B : 	%0	 %0
+NetDegree : 2  N22
+noc-3 B : 	%0	 %0
+mc-7 B : 	%0	 %0
+NetDegree : 2  N23
+noc-3 B : 	%0	 %0
+noc-7 B : 	%0	 %0
+NetDegree : 2  N24
+noc-3 B : 	%0	 %0
+noc-4 B : 	%0	 %0
+NetDegree : 2  N25
+noc-4 B : 	%0	 %0
+mc-8 B : 	%0	 %0
+NetDegree : 2  N26
+noc-4 B : 	%0	 %0
+noc-8 B : 	%0	 %0
+NetDegree : 2  N27
+noc-5 B : 	%0	 %0
+mc-1 B : 	%0	 %0
+NetDegree : 2  N28
+noc-5 B : 	%0	 %0
+noc-6 B : 	%0	 %0
+NetDegree : 2  N29
+noc-6 B : 	%0	 %0
+mc-2 B : 	%0	 %0
+NetDegree : 2  N30
+noc-6 B : 	%0	 %0
+noc-7 B : 	%0	 %0
+NetDegree : 2  N31
+noc-7 B : 	%0	 %0
+mc-3 B : 	%0	 %0
+NetDegree : 2  N32
+noc-7 B : 	%0	 %0
+noc-8 B : 	%0	 %0
+NetDegree : 2  N33
+noc-8 B : 	%0	 %0
+mc-4 B : 	%0	 %0

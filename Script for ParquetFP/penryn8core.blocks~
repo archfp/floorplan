@@ -1,0 +1,27 @@
+UCSC blocks  1.0
+
+NumSoftRectanularBlocks : 21
+NumHardRectilinearBlocks : 0
+NumTerminals : 0
+7.35412
+cpu-1 softrectangular 7.35412 0.05 20
+cpu-2 softrectangular 7.35412 0.05 20
+cpu-3 softrectangular 7.35412 0.05 20
+cpu-4 softrectangular 7.35412 0.05 20
+cpu-5 softrectangular 7.35412 0.05 20
+cpu-6 softrectangular 7.35412 0.05 20
+cpu-7 softrectangular 7.35412 0.05 20
+cpu-8 softrectangular 7.35412 0.05 20
+l2-1  softrectangular 6.70483 0.05 20
+l2-2  softrectangular 6.70483 0.05 20
+l2-3  softrectangular 6.70483 0.05 20
+l2-4  softrectangular 6.70483 0.05 20
+l2-5  softrectangular 6.70483 0.05 20
+l2-6  softrectangular 6.70483 0.05 20
+l2-7  softrectangular 6.70483 0.05 20
+l2-8  softrectangular 6.70483 0.05 20
+mc-1  softrectangular 3.55434 0.05 20
+mc-2  softrectangular 3.55434 0.05 20
+mc-3  softrectangular 3.55434 0.05 20
+mc-4  softrectangular 3.55434 0.05 20
+noc   softrectangular 0.95932 0.02 50

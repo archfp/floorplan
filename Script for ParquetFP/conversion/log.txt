@@ -1,0 +1,107 @@
+Reading Nodes (files penrynConversion.blocks and penrynConversion.pl)
+Reading Nets (file penrynConversion.nets)
+Done creating DB 
+Initial Area: 7.35413
+Initial HPWL: 37.5413
+
+***** START: round 1 / 1 *****
+The random seed for this run is: 716297768
+
+----- Annealing with BTree -----
+-1000 moves left with 1.495 micro seconds per move.
+TimeOut
+----- Annealing with BTree -----
+Original Area: 16.7731
+bottom Area: 16.7731
+top Area: 16.7731
+left Area: 16.7731
+right Area: 16.7731
+bottom-left Area: 16.7731
+bottom-right Area: 16.7731
+top-left Area: 14.9011
+top-right Area: 16.7731
+left-bottom Area: 16.7731
+right-bottom Area: 16.7731
+left-top Area: 16.7731
+right-top Area: 16.7731
+minimum Area: 14.9011 at top-left
+packing design towards top-left
+bottom Area: 14.9011
+top Area: 14.9011
+left Area: 14.3772
+right Area: 14.9011
+bottom-left Area: 14.3957
+bottom-right Area: 14.9011
+top-left Area: 14.3772
+top-right Area: 14.9011
+left-bottom Area: 14.3772
+right-bottom Area: 14.9011
+left-top Area: 14.3772
+right-top Area: 14.9011
+minimum Area: 14.3772 at left
+packing design towards left
+bottom Area: 14.3772
+top Area: 14.3772
+left Area: 14.3772
+right Area: 14.3772
+bottom-left Area: 14.2832
+bottom-right Area: 14.3772
+top-left Area: 14.3772
+top-right Area: 14.3772
+left-bottom Area: 14.3772
+right-bottom Area: 14.3772
+left-top Area: 14.3772
+right-top Area: 14.3772
+minimum Area: 14.2832 at bottom-left
+packing design towards bottom-left
+bottom Area: 14.2832
+top Area: 14.2832
+left Area: 12.4812
+right Area: 14.2832
+bottom-left Area: 12.4812
+bottom-right Area: 14.2832
+top-left Area: 10.2602
+top-right Area: 14.2832
+left-bottom Area: 12.4812
+right-bottom Area: 14.2832
+left-top Area: 12.4812
+right-top Area: 14.2832
+minimum Area: 10.2602 at top-left
+packing design towards top-left
+bottom Area: 10.2602
+top Area: 10.2602
+left Area: 10.1788
+right Area: 10.2602
+bottom-left Area: 10.1788
+bottom-right Area: 10.2602
+top-left Area: 10.1788
+top-right Area: 10.2602
+left-bottom Area: 10.1788
+right-bottom Area: 10.2602
+left-top Area: 10.1788
+right-top Area: 10.2602
+minimum Area: 10.1788 at left
+packing design towards left
+bottom Area: 10.1788
+top Area: 10.1788
+left Area: 10.1788
+right Area: 10.1788
+bottom-left Area: 10.1788
+bottom-right Area: 10.1788
+top-left Area: 10.1788
+top-right Area: 10.1788
+left-bottom Area: 10.1788
+right-bottom Area: 10.1788
+left-top Area: 10.1788
+right-top Area: 10.1788
+minimum Area: 10.1788 in the original position.
+packing design towards the original position
+final Area: 10.1788
+***** DONE:  round 1 / 1 *****
+
+***** SUMMARY of all rounds *****
+         Area: Best: 10.1788 Min: 10.1788 Average: 10.1788 Max: 10.1788
+         HPWL: Best: 89.9142 Min: 89.9142 Average: 89.9142 Max: 89.9142
+Unweighted HPWL: Min: 89.9142 Average: 89.9142 Max: 89.9142
+   WhiteSpace: Best: 38.4151% Min: 38.4151% Average: 38.4151% Max: 38.4151%
+Average Time: 0.010576

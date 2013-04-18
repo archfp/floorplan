@@ -1,0 +1,20 @@
+TIMEINIT=3e5
+
+***** SUMMARY of all rounds *****
+         Area: Best: 26.3232 Min: 26.3232 Average: 26.8715 Max: 28.4115
+         HPWL: Best: 155.579 Min: 97.764 Average: 138.014 Max: 207.218
+Unweighted HPWL: Min: 97.764 Average: 138.014 Max: 207.218
+   WhiteSpace: Best: 3.51563% Min: 3.51563% Average: 5.67177% Max: 11.7277%
+Average Time: 0.0506462
+
+TIMEINIT=3e6
+
+***** SUMMARY of all rounds *****
+         Area: Best: 26.2908 Min: 26.2908 Average: 26.8274 Max: 28.3725
+         HPWL: Best: 110.857 Min: 96.3066 Average: 142.271 Max: 217.393
+Unweighted HPWL: Min: 96.3066 Average: 142.271 Max: 217.393
+   WhiteSpace: Best: 3.38806% Min: 3.38806% Average: 5.49831% Max: 11.5745%
+Average Time: 0.0517942
+
+TIMEINIT=3e4
+

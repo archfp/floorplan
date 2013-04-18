@@ -1,0 +1,18 @@
+#!/bin/bash
+
+NITER=100
+TIMEINIT=3e5
+INBASE=penryn45
+OUTBASE=penryn45pl
+
+if [ $# -eq 0 ] ; then
+    # bin packing
+    ParquetFP -n $NITER -timeInit $TIMEINIT -f $INBASE -save $OUTBASE
+else
+    # WL minimization
+    WIREWEIGHT=$1
+    AREAWEIGHT=$2
+
+    ParquetFP -n $NITER -timeInit $TIMEINIT -f $INBASE -save $OUTBASE \
+	-minWL -wireWeight $WIREWEIGHT -areaWeight $AREAWEIGHT
+fi

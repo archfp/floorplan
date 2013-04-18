@@ -1,0 +1,93 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf510
+{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720
+
+\f0\fs24 \cf0 Charles,\
+\
+Another quick note-- ParquetFP minimally requires a .blocks file for input.\'a0 In the file I sent earlier you'll find a variety of examples.\
+\
+When we want to look at wire length, we'll have to specify a .nets file for input.\'a0 Again, there are options there.\'a0 ParquetFP will produce a .pl file; this describes the resulting placement of blocks.\'a0 Find below a gnuplot script for converting a .pl into a .ps file for displaying:\
+\
+=-=-=-=\
+\
+#!/usr/bin/perl\
+\
+# preamble\
+print "set nokey\\n";\
+print "set size ratio -1\\n\\n";\
+\
+# output spec\
+print "set terminal postscript portrait color solid 8\\n";\
+print "set output \\"out.ps\\"\\n\\n";\
+\
+# print lines\
+print "plot '-' w l\\n";\
+\
+while ($line = <>) \{\
+\'a0\'a0\'a0 #print $line;\
+\'a0\'a0\'a0 if ($line =~ /^(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+DIMS = \\((\\S+), (\\S+)\\)/) \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 #print "$1, $2, $3, $4, $5\\n";\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 # $1 -- component name\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 $name=$1;\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 # $2, $3, -- (x, y) coor of lower-left corner\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 $x0=$2;\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 $y0=$3;\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 # $4 -- width\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 $x1=$x0+$4;\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 # $5 -- height\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 $y1=$y0+$5;\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 # print lines\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 print "$x0 $y0\\n";\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 print "$x1 $y0\\n";\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 print "$x1 $y1\\n";\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 print "$x0 $y1\\n";\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 print "$x0 $y0\\n";\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 print "\\n";\
+\'a0\'a0\'a0 \} \
+\} \
+\
+=-=-=-=\
+\
+If you put the above into pl2ps.pl, the usage will be:\
+\
+pl2ps floorplan.pl > floorplan.plt\
+gnuplot floorplan.plt\
+\
+This will produce out.ps, which you can open with Preview (it will turn it into a PDF).\
+\
+BHM\
+\
+On 2013-04-08, at 9:01 AM, Brett Meyer wrote:\
+\
+> Rescheduling is fine; this is a crazy week for me and the extra time will help!\
+> \
+> Regarding CQSA, just to be clear: don't figure out how _it_ works, but figuring out how ParquetFP (which comes with CQSA) works is a good idea.\
+> \
+> Along these lines, I've attached a bunch of scripts for running ParquetFP that I put together when we were writing the VLSI-SOC paper.\'a0 Take a look; if you aren't familiar with bash scripting, here's your chance to learn a bit!\'a0 If you have questions about it, let me know.\
+> \
+> The scripts assume that ParquetFP is in your path, I believe.\
+> \
+> BHM\
+> \
+> \
+> \
+> On 2013-04-08, at 1:22 AM, Hsin Hung Lu wrote:\
+> \
+> > Hi Professor Meyer,\
+> > \
+> > I have talked to Xinchi, so he will work on integrating his Freespace code into ArchFP the way we discussed last meeting. On my side, I have installed and set up CSQA package, and will keep on learning how it works.\
+> > \
+> > We got nothing else to update for this week, thus there is perhaps no need to meet tomorrow. Could we reschedule it for next Monday, at 1:30 like usual?\
+> > \
+> > Thanks,\
+> > Charles\
+> \
+> <floorplans.zip>\
+}

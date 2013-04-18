@@ -1,0 +1,5 @@
+ArchFP
+- Area: 7.35413
+- HPWL: 37.5413
+
+Those parameter sets that yield the same or better wire length--

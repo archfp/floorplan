@@ -1,0 +1,127 @@
+UCLA nets  1.0
+
+NumNets : 36
+NumPins : 72
+
+NetDegree : 2
+instbuf B
+btb B
+NetDegree : 2
+instbuf B
+brp B
+NetDegree : 2
+instbuf B
+itlb B
+NetDegree : 2
+instbuf B
+instdec B
+NetDegree : 2
+instbuf B
+icache B
+
+NetDegree : 2
+instdec B
+fl B
+NetDegree : 2
+instdec B
+intrat B
+NetDegree : 2
+instdec B
+flprat B
+NetDegree : 2
+instdec B
+intiw B
+NetDegree : 2
+instdec B
+flpiw B
+
+NetDegree : 2
+fl B
+intrat B
+NetDegree : 2
+fl B
+flprat B
+
+NetDegree : 2
+intrat B
+intiw B
+NetDegree : 2
+intrat B
+intrf B
+
+NetDegree : 2
+flprat B
+flpiw B
+NetDegree : 2
+flprat B
+flprf B
+
+NetDegree : 2
+intiw B
+alu B
+NetDegree : 2
+intiw B
+cplalu B
+NetDegree : 2
+intiw B
+intrf B
+
+NetDegree : 2
+flpiw B
+fpu B
+NetDegree : 2
+flpiw B
+flprf B
+
+NetDegree : 2
+intrf B
+alu B
+NetDegree : 2
+intrf B
+cplalu B
+NetDegree : 2
+intrf B
+rob B
+
+NetDegree : 2
+flprf B
+fpu B
+NetDegree : 2
+flprf B
+rob B
+
+NetDegree : 2
+alu B
+rob B
+
+NetDegree : 2
+fpu B
+rob B
+
+NetDegree : 2
+cplalu B
+stq B
+NetDegree : 2
+cplalu B
+ldq B
+NetDegree : 2
+cplalu B
+rob B
+
+NetDegree : 2
+stq B
+dtlb B
+NetDegree : 2
+stq B
+dcache B
+
+NetDegree : 2
+ldq B
+dtlb B
+NetDegree : 2
+ldq B
+dcache B
+
+NetDegree : 2
+dtlb B
+dcache B

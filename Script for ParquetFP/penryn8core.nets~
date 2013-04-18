@@ -1,0 +1,81 @@
+UCLA nets  1.0
+
+NumNets : 20
+NumPins : 40
+
+NetDegree : 2
+cpu-1 B
+l2-1 B
+
+NetDegree : 2
+cpu-2 B
+l2-2 B
+
+NetDegree : 2
+cpu-3 B
+l2-3 B
+
+NetDegree : 2
+cpu-4 B
+l2-4 B
+
+NetDegree : 2
+cpu-5 B
+l2-5 B
+
+NetDegree : 2
+cpu-6 B
+l2-6 B
+
+NetDegree : 2
+cpu-7 B
+l2-7 B
+
+NetDegree : 2
+cpu-8 B
+l2-8 B
+
+NetDegree : 2
+l2-1 B
+noc B
+
+NetDegree : 2
+l2-2 B
+noc B
+
+NetDegree : 2
+l2-3 B
+noc B
+
+NetDegree : 2
+l2-4 B
+noc B
+
+NetDegree : 2
+l2-5 B
+noc B
+
+NetDegree : 2
+l2-6 B
+noc B
+
+NetDegree : 2
+l2-7 B
+noc B
+
+NetDegree : 2
+l2-8 B
+noc B
+
+NetDegree : 2
+noc B
+mc-1
+NetDegree : 2
+noc B
+mc-2
+NetDegree : 2
+noc B
+mc-3
+NetDegree : 2
+noc B
+mc-4

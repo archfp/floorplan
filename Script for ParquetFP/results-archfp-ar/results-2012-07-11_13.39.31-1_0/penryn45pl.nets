@@ -1,0 +1,114 @@
+UCLA nets   1.0
+
+
+NumNets : 36
+NumPins : 72
+
+NetDegree : 2  N0
+instbuf B : 	%0	 %0
+btb B : 	%0	 %0
+NetDegree : 2  N1
+instbuf B : 	%0	 %0
+brp B : 	%0	 %0
+NetDegree : 2  N2
+instbuf B : 	%0	 %0
+itlb B : 	%0	 %0
+NetDegree : 2  N3
+instbuf B : 	%0	 %0
+instdec B : 	%0	 %0
+NetDegree : 2  N4
+instbuf B : 	%0	 %0
+icache B : 	%0	 %0
+NetDegree : 2  N5
+instdec B : 	%0	 %0
+fl B : 	%0	 %0
+NetDegree : 2  N6
+instdec B : 	%0	 %0
+intrat B : 	%0	 %0
+NetDegree : 2  N7
+instdec B : 	%0	 %0
+flprat B : 	%0	 %0
+NetDegree : 2  N8
+instdec B : 	%0	 %0
+intiw B : 	%0	 %0
+NetDegree : 2  N9
+instdec B : 	%0	 %0
+flpiw B : 	%0	 %0
+NetDegree : 2  N10
+fl B : 	%0	 %0
+intrat B : 	%0	 %0
+NetDegree : 2  N11
+fl B : 	%0	 %0
+flprat B : 	%0	 %0
+NetDegree : 2  N12
+intrat B : 	%0	 %0
+intiw B : 	%0	 %0
+NetDegree : 2  N13
+intrat B : 	%0	 %0
+intrf B : 	%0	 %0
+NetDegree : 2  N14
+flprat B : 	%0	 %0
+flpiw B : 	%0	 %0
+NetDegree : 2  N15
+flprat B : 	%0	 %0
+flprf B : 	%0	 %0
+NetDegree : 2  N16
+intiw B : 	%0	 %0
+alu B : 	%0	 %0
+NetDegree : 2  N17
+intiw B : 	%0	 %0
+cplalu B : 	%0	 %0
+NetDegree : 2  N18
+intiw B : 	%0	 %0
+intrf B : 	%0	 %0
+NetDegree : 2  N19
+flpiw B : 	%0	 %0
+fpu B : 	%0	 %0
+NetDegree : 2  N20
+flpiw B : 	%0	 %0
+flprf B : 	%0	 %0
+NetDegree : 2  N21
+intrf B : 	%0	 %0
+alu B : 	%0	 %0
+NetDegree : 2  N22
+intrf B : 	%0	 %0
+cplalu B : 	%0	 %0
+NetDegree : 2  N23
+intrf B : 	%0	 %0
+rob B : 	%0	 %0
+NetDegree : 2  N24
+flprf B : 	%0	 %0
+fpu B : 	%0	 %0
+NetDegree : 2  N25
+flprf B : 	%0	 %0
+rob B : 	%0	 %0
+NetDegree : 2  N26
+alu B : 	%0	 %0
+rob B : 	%0	 %0
+NetDegree : 2  N27
+fpu B : 	%0	 %0
+rob B : 	%0	 %0
+NetDegree : 2  N28
+cplalu B : 	%0	 %0
+stq B : 	%0	 %0
+NetDegree : 2  N29
+cplalu B : 	%0	 %0
+ldq B : 	%0	 %0
+NetDegree : 2  N30
+cplalu B : 	%0	 %0
+rob B : 	%0	 %0
+NetDegree : 2  N31
+stq B : 	%0	 %0
+dtlb B : 	%0	 %0
+NetDegree : 2  N32
+stq B : 	%0	 %0
+dcache B : 	%0	 %0
+NetDegree : 2  N33
+ldq B : 	%0	 %0
+dtlb B : 	%0	 %0
+NetDegree : 2  N34
+ldq B : 	%0	 %0
+dcache B : 	%0	 %0
+NetDegree : 2  N35
+dtlb B : 	%0	 %0
+dcache B : 	%0	 %0

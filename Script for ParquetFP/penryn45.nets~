@@ -1,0 +1,16 @@
+UCLA nets  1.0
+
+NumNets :
+NumPins :
+
+NetDegree : 2
+instbuf U
+btb U
+NetDegree : 2
+instbuf U
+brp U
+NetDegree : 2
+instbuf U
+instdec U
+NetDegree : 2
+

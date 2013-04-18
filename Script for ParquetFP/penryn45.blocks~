@@ -1,0 +1,48 @@
+UCSC blocks  1.0
+
+NumSoftRectangularBlocks : 21
+NumHardRectilinearBlocks : 0
+NumTerminals : 0
+
+dtlb softrectangular	0.338244327	1	1
+itlb softrectangular	0.077052929	1	1
+intrat softrectangular	0.71966236 	1	1
+flprat softrectangular	0.422533684	1	1
+fl softrectangular	0.038803929	1	1
+btb softrectangular	0.421114241	1	1
+brp softrectangular	0.184379364	1	1
+instbuf softrectangular	0.033546809	1	1
+instdec softrectangular	2.23880363 	1	1
+icache softrectangular	0.846413307	1	1
+stq softrectangular	1.383335898	1	1
+ldq softrectangular	0.340341398	1	1
+dcache softrectangular	6.068507686	1	1
+intrf softrectangular	0.405403972	1	1
+flprf softrectangular	0.230906485	1	1
+cplalu softrectangular	0.283689758	1	1
+intiw softrectangular	1.072042067	1	1
+flpiw softrectangular	0.418630818	1	1
+rob softrectangular	0.88821096 	1	1
+alu softrectangular	3.404277091	1	1
+fpu softrectangular	5.61330616 	1	1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

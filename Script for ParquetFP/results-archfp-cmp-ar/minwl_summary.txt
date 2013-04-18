@@ -1,0 +1,175 @@
+==> ./results-2012-07-12_09.37.56/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 134.787 Min: 134.787 Average: 137.71 Max: 145.307
+         HPWL: Best: 267.6 Min: 177.391 Average: 315.692 Max: 630.553
+Unweighted HPWL: Min: 177.391 Average: 315.692 Max: 630.553
+   WhiteSpace: Best: 0.315411% Min: 0.315411% Average: 2.49028% Max: 8.1446%
+Average Time: 0.120582
+
+==> ./results-2012-07-12_09.38.56-0_0/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 135.121 Min: 135.121 Average: 137.755 Max: 148.226
+         HPWL: Best: 267.481 Min: 170.532 Average: 317.605 Max: 869.126
+Unweighted HPWL: Min: 170.532 Average: 317.605 Max: 869.126
+   WhiteSpace: Best: 0.563434% Min: 0.563434% Average: 2.52407% Max: 10.3171%
+Average Time: 0.120354
+
+==> ./results-2012-07-12_09.39.56-0_0.2/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 134.788 Min: 134.788 Average: 137.718 Max: 149.055
+         HPWL: Best: 256.019 Min: 174.387 Average: 316.497 Max: 698.878
+Unweighted HPWL: Min: 174.387 Average: 316.497 Max: 698.878
+   WhiteSpace: Best: 0.315547% Min: 0.315547% Average: 2.49684% Max: 10.9339%
+Average Time: 0.119813
+
+==> ./results-2012-07-12_09.40.56-0_0.4/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 134.364 Min: 134.364 Average: 137.71 Max: 143.213
+         HPWL: Best: 325.627 Min: 192.795 Average: 313.104 Max: 696.826
+Unweighted HPWL: Min: 192.795 Average: 313.104 Max: 696.826
+   WhiteSpace: Best: 0.000476967% Min: 0.000476967% Average: 2.49091% Max: 6.58643%
+Average Time: 0.12042
+
+==> ./results-2012-07-12_09.41.57-0_0.6/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 134.831 Min: 134.831 Average: 137.663 Max: 146.23
+         HPWL: Best: 266.506 Min: 206.222 Average: 317.929 Max: 633.722
+Unweighted HPWL: Min: 206.222 Average: 317.929 Max: 633.722
+   WhiteSpace: Best: 0.348288% Min: 0.348288% Average: 2.45526% Max: 8.83168%
+Average Time: 0.12019
+
+==> ./results-2012-07-12_09.42.57-0_0.8/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 135.211 Min: 135.211 Average: 137.645 Max: 148.12
+         HPWL: Best: 350.366 Min: 191.265 Average: 317.969 Max: 649.782
+Unweighted HPWL: Min: 191.265 Average: 317.969 Max: 649.782
+   WhiteSpace: Best: 0.630891% Min: 0.630891% Average: 2.44231% Max: 10.238%
+Average Time: 0.118828
+
+==> ./results-2012-07-12_09.43.56-0_1/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 134.788 Min: 134.788 Average: 137.686 Max: 150.967
+         HPWL: Best: 283.913 Min: 199.399 Average: 318.283 Max: 629.37
+Unweighted HPWL: Min: 199.399 Average: 318.283 Max: 629.37
+   WhiteSpace: Best: 0.315582% Min: 0.315582% Average: 2.47233% Max: 12.3569%
+Average Time: 0.119104
+
+==> ./results-2012-07-12_09.44.56-0.2_0/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 149.797 Min: 138.563 Average: 150.077 Max: 176.243
+         HPWL: Best: 82.074 Min: 82.074 Average: 99.7572 Max: 126.56
+Unweighted HPWL: Min: 82.074 Average: 99.7572 Max: 126.56
+   WhiteSpace: Best: 11.4866% Min: 3.12514% Average: 11.6951% Max: 31.1687%
+Average Time: 0.157024
+
+==> ./results-2012-07-12_09.46.14-0.2_0.2/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 148.268 Min: 137.871 Average: 147.214 Max: 165.323
+         HPWL: Best: 82.5336 Min: 82.5336 Average: 103.089 Max: 138.144
+Unweighted HPWL: Min: 82.5336 Average: 103.089 Max: 138.144
+   WhiteSpace: Best: 10.3482% Min: 2.61051% Average: 9.56429% Max: 23.0416%
+Average Time: 0.157604
+
+==> ./results-2012-07-12_09.47.33-0.2_0.4/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 150.291 Min: 136.038 Average: 144.764 Max: 159.915
+         HPWL: Best: 82.6758 Min: 82.6758 Average: 106.7 Max: 162.708
+Unweighted HPWL: Min: 82.6758 Average: 106.7 Max: 162.708
+   WhiteSpace: Best: 11.8543% Min: 1.24601% Average: 7.74048% Max: 19.0169%
+Average Time: 0.155395
+
+==> ./results-2012-07-12_09.48.51-0.2_0.6/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 141.802 Min: 136.681 Average: 143.083 Max: 156.223
+         HPWL: Best: 84.3922 Min: 84.3922 Average: 111.523 Max: 182.193
+Unweighted HPWL: Min: 84.3922 Average: 111.523 Max: 182.193
+   WhiteSpace: Best: 5.53621% Min: 1.72503% Average: 6.48965% Max: 16.2691%
+Average Time: 0.156646
+
+==> ./results-2012-07-12_09.50.09-0.2_0.8/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 140.263 Min: 135.503 Average: 141.797 Max: 156.188
+         HPWL: Best: 87.9627 Min: 87.9627 Average: 116.048 Max: 194.008
+Unweighted HPWL: Min: 87.9627 Average: 116.048 Max: 194.008
+   WhiteSpace: Best: 4.39035% Min: 0.847899% Average: 5.53223% Max: 16.243%
+Average Time: 0.157624
+
+==> ./results-2012-07-12_09.51.28-0.4_0/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 153.352 Min: 139.114 Average: 153.095 Max: 175.991
+         HPWL: Best: 75.045 Min: 75.045 Average: 96.9351 Max: 119.244
+Unweighted HPWL: Min: 75.045 Average: 96.9351 Max: 119.244
+   WhiteSpace: Best: 14.132% Min: 3.53553% Average: 13.9411% Max: 30.9809%
+Average Time: 0.159755
+
+==> ./results-2012-07-12_09.52.48-0.4_0.2/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 152.324 Min: 138.489 Average: 149.097 Max: 167.275
+         HPWL: Best: 79.711 Min: 79.711 Average: 99.4741 Max: 136.782
+Unweighted HPWL: Min: 79.711 Average: 99.4741 Max: 136.782
+   WhiteSpace: Best: 13.3672% Min: 3.07053% Average: 10.9651% Max: 24.4942%
+Average Time: 0.158325
+
+==> ./results-2012-07-12_09.54.07-0.4_0.4/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 156.503 Min: 137.617 Average: 146.966 Max: 168.6
+         HPWL: Best: 82.1496 Min: 82.1496 Average: 102.823 Max: 167.55
+Unweighted HPWL: Min: 82.1496 Average: 102.823 Max: 167.55
+   WhiteSpace: Best: 16.4771% Min: 2.42132% Average: 9.37961% Max: 25.4805%
+Average Time: 0.15684
+
+==> ./results-2012-07-12_09.55.26-0.4_0.6/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 141.039 Min: 137.237 Average: 144.947 Max: 166.599
+         HPWL: Best: 82.5637 Min: 82.5637 Average: 107.188 Max: 161.051
+Unweighted HPWL: Min: 82.5637 Average: 107.188 Max: 161.051
+   WhiteSpace: Best: 4.96803% Min: 2.1388% Average: 7.87676% Max: 23.9909%
+Average Time: 0.15896
+
+==> ./results-2012-07-12_09.56.45-0.6_0/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 149.635 Min: 139.796 Average: 158.297 Max: 192.638
+         HPWL: Best: 74.9529 Min: 74.9529 Average: 94.8102 Max: 121.085
+Unweighted HPWL: Min: 74.9529 Average: 94.8102 Max: 121.085
+   WhiteSpace: Best: 11.3654% Min: 4.04289% Average: 17.8124% Max: 43.3707%
+Average Time: 0.159481
+
+==> ./results-2012-07-12_09.58.05-0.6_0.2/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 149.468 Min: 138.397 Average: 152.856 Max: 173.128
+         HPWL: Best: 76.2483 Min: 76.2483 Average: 97.015 Max: 124.271
+Unweighted HPWL: Min: 76.2483 Average: 97.015 Max: 124.271
+   WhiteSpace: Best: 11.2415% Min: 3.00216% Average: 13.7628% Max: 28.8502%
+Average Time: 0.156617
+
+==> ./results-2012-07-12_09.59.23-0.6_0.4/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 153.165 Min: 137.661 Average: 149.254 Max: 181.969
+         HPWL: Best: 76.8299 Min: 76.8299 Average: 100.071 Max: 141.326
+Unweighted HPWL: Min: 76.8299 Average: 100.071 Max: 141.326
+   WhiteSpace: Best: 13.9928% Min: 2.45422% Average: 11.082% Max: 35.4302%
+Average Time: 0.156815
+
+==> ./results-2012-07-12_10.00.42-0.8_0/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 181.082 Min: 140.94 Average: 169.821 Max: 234.979
+         HPWL: Best: 72.2155 Min: 72.2155 Average: 92.2231 Max: 113.023
+Unweighted HPWL: Min: 72.2155 Average: 92.2231 Max: 113.023
+   WhiteSpace: Best: 34.7699% Min: 4.89454% Average: 26.3894% Max: 74.883%
+Average Time: 0.156259
+
+==> ./results-2012-07-12_10.02.00-0.8_0.2/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 146.048 Min: 137.678 Average: 156.56 Max: 185.383
+         HPWL: Best: 72.0303 Min: 72.0303 Average: 95.1739 Max: 125.685
+Unweighted HPWL: Min: 72.0303 Average: 95.1739 Max: 125.685
+   WhiteSpace: Best: 8.69604% Min: 2.46651% Average: 16.52% Max: 37.9711%
+Average Time: 0.157905
+
+==> ./results-2012-07-12_10.03.19-1_0/log.txt <==
+***** SUMMARY of all rounds *****
+         Area: Best: 212.185 Min: 149.381 Average: 200.383 Max: 321.094
+         HPWL: Best: 69.8277 Min: 69.8277 Average: 90.9623 Max: 113.011
+Unweighted HPWL: Min: 69.8277 Average: 90.9623 Max: 113.011
+   WhiteSpace: Best: 57.9189% Min: 11.1769% Average: 49.1353% Max: 138.974%
+Average Time: 0.156045
