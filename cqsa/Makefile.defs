@@ -1,0 +1,34 @@
+#### library locations ####
+WHEREAMI=Darwin
+#WHEREAMI=Linux
+
+ifeq "$(WHEREAMI)" "Darwin"
+GSL_INC=/sw/include
+GSL_LIB=/sw/lib
+else
+ifeq "$(WHEREAMI)" "Linux"
+GSL_INC=/usr/local/include
+GSL_LIB=/usr/local/lib
+endif
+endif
+
+#### make ####
+MAKE=make -k
+
+#### compilation and linking ####
+CC=g++
+CFLAGS=-g -Wall
+LDFLAGS=
+
+INCS=-I$(GSL_INC)
+
+LIBS=-lgsl -lgslcblas -lm
+LDPATH=-L$(GSL_LIB)
+
+AR=ar -rs
+
+#### optimitization ####
+CFLAGS+=-O3 -funroll-loops
+
+#### cleaning ####
+RM=rm -rf
