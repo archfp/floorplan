@@ -173,9 +173,9 @@ public:
     int decRefCount() { return refCount -= 1; }
     
     void addWireToAtIndex(FPObject * c, int index);
-    void removeWireToAtIndex(int index);
+    FPObject * removeWireToAtIndex(int index);
     void addWireTo(FPObject * c);
-    void removeWireTo(FPObject * c); 
+    FPObject * removeWireTo(int index); 
     
     void           outputNetLength(ostream& o);
     int            getItemCount() { return itemCount; }

@@ -212,6 +212,28 @@ void FPNet::addWireTo(FPObject* comp) {
     addWireToAtIndex(comp, itemCount);
 }
 
+FPObject * FPNet::removeWireToAtIndex(int index) {
+    if (index < 0 || index >= itemCount) throw invalid_argument("Attempt to add item to Container at illegal index.");
+    FPObject * comp = items[index];
+    // Now fill in the hole.
+    for (int i = index; i < itemCount - 1; i++) items[i] = items[i + 1];
+    itemCount -= 1;
+    // Often this component is about to be added somewhere else.
+    // So, if the refCount is now zero, don't handle it here.
+    // If the caller doesn't put it somewhere else, they will have to delete it themselves.
+    comp->decRefCount();
+    
+    // Udpate netLength
+    
+    
+    return comp;
+    
+}
+
+FPObject * FPNet::removeWireTo(int index) {
+    return removeWireToAtIndex(index);
+}
+
 void FPObject::outputHotSpotLayout(ostream& o, double startX, double startY) {
     string uname = (printNames) ? getUniqueName() : " ";
 
@@ -1234,6 +1256,8 @@ bool FPContainer::detectOverlap(FPObject ** layoutStack, int curDepth, FPObject 
     return true;
 }
 
+// At the moment, this is the only way to get the net length.
+// We don't actively update netLength, call this method to refresh the actual value.
 void FPNet::calcNetLength() {    
     double totalWireLength = 0;
     double thisWireLength = 0;

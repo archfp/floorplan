@@ -16,8 +16,11 @@
 void generateErrorCase()
 {
     
-    geogLayout * fp1 = new geogLayout();
-
+    geogLayout * fp1 = new geogLayout();    
+    FPNet * n1 = new FPNet(); FPNet * n2 = new FPNet();
+    
+    fp1->addNet(n1); fp1->addNet(n2);
+        
     //Testcase 1 Top/Bottom/Left/Right    
     fp1->addComponentCluster("eR1", 1, 4, 3., 1., Right);
     fp1->addComponentCluster("eL1", 1, 4, 3., 1., Left);
@@ -29,9 +32,8 @@ void generateErrorCase()
     fp1->addComponentCluster("eB1", 1, 4, 3., 1., Bottom);
     fp1->addComponentCluster("eT1", 1, 4, 3., 1., Top);
     
-    FPNet * n1 = new FPNet();
-    fp1->addNet(n1);
-    //n1->addWireTo("eR1");
+    //If I would like to add this specific component after it is defined
+    //n1->addWireTo("eR1");  
     //n1->addWireTo("eL1");
     
     
