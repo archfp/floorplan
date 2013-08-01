@@ -1,0 +1,21 @@
+UCSC blocks  1.0
+
+NumSoftRectangularBlocks : 15
+NumHardRectilinearBlocks : 0
+NumTerminals : 0
+
+Cluster1	softrectangular	0	nan	nan
+L2_1	softrectangular	9.5	2	1
+L2_2	softrectangular	9.5	2	1
+L2_3	softrectangular	9.5	2	1
+L2_4	softrectangular	9.5	2	1
+L2_5	softrectangular	9.5	2	1
+L2_6	softrectangular	9.5	2	1
+L2_7	softrectangular	9.5	2	1
+L2_8	softrectangular	9.5	2	1
+L2_9	softrectangular	9.5	2	1
+L2_10	softrectangular	9.5	2	1
+L2_11	softrectangular	9.5	2	1
+L2_12	softrectangular	9.5	2	1
+Cluster2	softrectangular	97	1	1
+Cluster3	softrectangular	97	1	1

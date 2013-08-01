@@ -12,25 +12,28 @@
 #include <cmath>
 #include "MathUtil.hh"
 #include "Floorplan.hh"
-
+// This testcase is to check the bottom-up fixups feature
 void generateErrorCase()
 {
-    // This section is to test the bottom-up fixups feature
     
-    // NOW TODO: Add a method called legalizing to geogLayout.
     geogLayout * fp1 = new geogLayout();
 
     //Testcase 1 Top/Bottom/Left/Right    
     fp1->addComponentCluster("eR1", 1, 4, 3., 1., Right);
     fp1->addComponentCluster("eL1", 1, 4, 3., 1., Left);
    
-    
     //Testcase 2 LeftRight/TopBottom
     fp1->addComponentCluster("eLReven", 2, 10, 5., 1., LeftRight);
     fp1->addComponentCluster("eTBeven", 2, 10, 5., 1., TopBottom);
     
     fp1->addComponentCluster("eB1", 1, 4, 3., 1., Bottom);
     fp1->addComponentCluster("eT1", 1, 4, 3., 1., Top);
+    
+    FPNet * n1 = new FPNet();
+    fp1->addNet(n1);
+    //n1->addWireTo("eR1");
+    //n1->addWireTo("eL1");
+    
     
     //Testcase 2.1 LeftRight/TopBottom with odd count
     //fp1->addComponentCluster("eLRodd", 3, 9, 5., 1., LeftRight);
@@ -62,12 +65,21 @@ void generateErrorCase()
     //fp1->addComponentCluster("eLR180odd", 3, 3.0519, 3., 1., LeftRight180);
     
     //Testcase 7 AR Variation
+    
+    //Output to .blocks
+    ostream& PFPOut = outputBlockFileHeader("test.blocks");
+    fp1->outputBlockFile(PFPOut);
+    outputBlockFileFooter(PFPOut);
+    
+    
     fp1->layout(AspectRatio, 1.0);
-
+    
     ostream& HSOut = outputHotSpotHeader("testDoubleWire.flp");
     fp1->outputHotSpotLayout(HSOut);
-    fp1->outputWireLength(HSOut);
+    //fp1->outputWireLength(HSOut);
     outputHotSpotFooter(HSOut);
+    
+    
 }
     
 void generateErrorCase2() {
@@ -142,7 +154,12 @@ void generateTRIPS_Examples()
     WholeChip->addComponent(L2Stack, 1, Left);
     WholeChip->addComponentCluster(L2, 12, 9.5, 2.0, 1., Left);
     WholeChip->addComponent(CoreCluster, 2, TopBottomMirror);
-
+    
+    //Output to .blocks
+    ostream& PFPOut = outputBlockFileHeader("TRIPS-Final.blocks");
+    WholeChip->outputBlockFile(PFPOut);
+    outputBlockFileFooter(PFPOut);
+    
     // Now perform the actual layout.
     bool success = WholeChip->layout(AspectRatio, 1.);
 
@@ -709,6 +726,7 @@ int main(int argc, char* argv[])
   //generateErrorCase2();
   //generateErrorCase3();
   //callSetupExamples();
+  generateTRIPS_Examples();
 
   return 0;
 }

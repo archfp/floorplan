@@ -90,7 +90,7 @@ extern ostream& operator<< (ostream& s, dummyComponent& c);
 // We will pull out the basic variables into a base class.
 class FPObject {
     int refCount;
-
+    
 // Make the common variables available to the inheriting classes.
 protected:
     // The x,y values will be relative to the enclosing object.
@@ -150,10 +150,39 @@ public:
     virtual void          setLocation(double xArg, double yArg);
     virtual bool          setState(bool newState) { return state = newState; }
     virtual void          setCenter(double xcArg, double ycArg);
-
+    
     virtual bool          layout (FPOptimization opt, double targetAR =  1.0) = 0;
     virtual void          outputHotSpotLayout(ostream& o, double startX = 0.0, double startY = 0.0);
 
+};
+
+class FPNet {
+    int refCount;
+    FPObject ** items; // The list of components connected together by this net
+    int itemCount; // The number of components connected to this net
+    double netLength;
+    string name;
+    static int maxItemCount;
+    
+//protected:
+    
+public:
+    FPNet ();
+    ~FPNet ();
+    int incRefCount() { return refCount += 1; }
+    int decRefCount() { return refCount -= 1; }
+    
+    void addWireToAtIndex(FPObject * c, int index);
+    void removeWireToAtIndex(int index);
+    void addWireTo(FPObject * c);
+    void removeWireTo(FPObject * c); 
+    
+    void           outputNetLength(ostream& o);
+    int            getItemCount() { return itemCount; }
+    double         getNetLength() { return netLength; }
+    double         getMaxItemCount() { return maxItemCount; }
+    FPObject *     getComponent(int index) { return items[index]; }
+    void           calcNetLength();
 };
 
 // This class is the lowest level in the component hierarchy.
@@ -204,14 +233,20 @@ class FPContainer : public FPObject {
     // In this way, we can maintain proper refcounts that can tell us
     //    when things can be deleted.
     int itemCount;
-    double wireLength;
+    int netCount;
+    double totalNetsLength;
     FPObject ** items;
+    FPNet ** nets;
     //double newAR;
     void       addComponentAtIndex (FPObject * comp, int index);
     FPObject * removeComponentAtIndex (int index);
+    void       addNetAtIndex (FPNet * net, int index);
+    FPNet *    removeNetAtIndex (int index);
+    
 
 protected:
     static int maxItemCount;
+    static int maxNetCount;
 
     // These allow safe access to the item list.
     int        getComponentCount()          { return itemCount; }
@@ -224,7 +259,8 @@ protected:
 public:
     FPContainer();
     ~FPContainer();
-
+    
+    //FPObject * getComponent(int index)      { return items[index]; }
     // We often need the total area of a container before it is layout out.
     // This will cause a recurse on containers til we get to objects at the bottom.
     virtual double         totalArea();
@@ -239,7 +275,7 @@ public:
     // return a bool to indicate success or failure.
     virtual bool           layout (FPOptimization opt, double targetAR =  1.0) = 0;
     virtual void           outputHotSpotLayout(ostream& o, double startX = 0.0, double startY = 0.0) = 0;
-            void           outputWireLength(ostream& o);
+            void           outputBlockFile(ostream& o);
 
     // Ways to add components.
     virtual FPObject *     addComponentCluster (ComponentType type, int count, double area, double maxARArg, double minARArg);
@@ -247,9 +283,10 @@ public:
     virtual void           addComponent (FPObject * comp);
     virtual void           addComponent (FPObject * comp, int count);
     
+    virtual void           addNet (FPNet * net);
+    
     virtual bool           detectOverlap(FPObject ** layoutStack, int curDepth, FPObject * FPLayout);
-    virtual double         getWireLength() { return wireLength; }
-    virtual void           calcWireLength(FPObject ** layoutStack, int count);
+    void                   calcNetLength();
 };
 
 // This will just be a collection of components to lay out in the given aspect ratio.
@@ -350,3 +387,6 @@ public:
 ostream& outputHotSpotHeader(const char * filename);
 void outputHotSpotFooter(ostream& o);
 string getStringFromInt(int in);
+
+ostream& outputBlockFileHeader(const char * filename);
+void outputBlockFileFooter(ostream& o);

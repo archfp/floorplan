@@ -174,8 +174,43 @@ void FPObject::setCenter(double xcArg, double ycArg) {
     yc = ycArg;
 }
 
-//Q: Why is there a case where one doesn't print the name?
-//A: // These are too messy with names.  Just output the shapes.
+int FPNet::maxItemCount = 50;
+int FPContainer::maxNetCount = 50;
+
+FPNet::FPNet() {
+    refCount = 0;
+    itemCount = 0;
+    items = new FPObject*[maxItemCount];
+    netLength = 0.0;
+}
+
+FPNet::~FPNet() {
+    // It's very important to only delete items when their refcount hits zero.
+    // cout << "deleting container.\n";
+    for (int i = 0; i < itemCount; i++) {
+        FPObject * item = items[i];
+        int newCount = item->decRefCount();
+        if (newCount == 0) delete item;
+    }
+    delete [] items;
+}
+
+void FPNet::addWireToAtIndex(FPObject* comp, int index) {
+    if (index < 0 || index > itemCount) throw invalid_argument("Attempt to add item to Container at illegal index.");
+    if (itemCount == maxItemCount) throw out_of_range("Attempt to add more than the maximum items to a container.");
+    // See if we need to move things to open space.
+    if (index < itemCount) for (int i = itemCount; i > index; i--) items[i] = items[i - 1];
+    items[index] = comp;
+    itemCount += 1;
+    incRefCount();
+    
+    // Update netLength
+    
+}
+
+void FPNet::addWireTo(FPObject* comp) {
+    addWireToAtIndex(comp, itemCount);
+}
 
 void FPObject::outputHotSpotLayout(ostream& o, double startX, double startY) {
     string uname = (printNames) ? getUniqueName() : " ";
@@ -184,6 +219,28 @@ void FPObject::outputHotSpotLayout(ostream& o, double startX, double startY) {
             << "\t" << calcX(startX) / 1000 << "\t" << calcY(startY) / 1000 << "\n";
 }
 
+void FPContainer::outputBlockFile(ostream& o) {
+    
+    int totalCount = 0;
+    for (int i = 0; i < getComponentCount(); i++) {
+        totalCount += getComponent(i)->getCount();
+    }
+    
+    o << "NumSoftRectangularBlocks : " << totalCount << "\n";
+    o << "NumHardRectilinearBlocks : 0\n";
+    o << "NumTerminals : 0\n\n";
+    
+    for (int i = 0; i < getComponentCount(); i++) {
+        FPObject * obj = getComponent(i);
+        
+        for (int j = 0; j < obj->getCount(); j++) {
+            o << obj->getUniqueName() << "\t" << "softrectangular" << "\t" 
+              << obj->getArea() << "\t" << obj->getMaxAR() << "\t" << obj->getMinAR()
+              << "\n";
+        }
+    }
+    
+}
 
 // Methods for the FPWrapper class.
 
@@ -348,6 +405,33 @@ FPObject * FPContainer::addComponentCluster(string name, int count, double area,
 
 FPObject * FPContainer::removeComponent(int index) {
     return removeComponentAtIndex(index);
+}
+
+void FPContainer::addNetAtIndex(FPNet * net, int index) {
+    if (index < 0 || index > netCount) throw invalid_argument("Attempt to add item to Container at illegal index.");
+    if (netCount == maxNetCount) throw out_of_range("Attempt to add more than the maximum items to a container.");
+    // See if we need to move things to open space.
+    if (index < netCount) for (int i = netCount; i > index; i--) nets[i] = nets[i - 1];
+    nets[index] = net;
+    netCount += 1;
+    net->incRefCount();
+}
+
+FPNet * FPContainer::removeNetAtIndex(int index) {
+    if (index < 0 || index >= netCount) throw invalid_argument("Attempt to add item to Container at illegal index.");
+    FPNet * net = nets[index];
+    // Now fill in the hole.
+    for (int i = index; i < itemCount - 1; i++) items[i] = items[i + 1];
+    itemCount -= 1;
+    // Often this component is about to be added somewhere else.
+    // So, if the refCount is now zero, don't handle it here.
+    // If the caller doesn't put it somewhere else, they will have to delete it themselves.
+    net->decRefCount();
+    return net;
+}
+
+void FPContainer::addNet(FPNet * net) {
+    addNetAtIndex(net, netCount);
 }
 
 // We need to sort items by total area.
@@ -808,9 +892,10 @@ bool geogLayout::layout(FPOptimization opt, double targetAR) {
     expandHeight = 0; expandWidth = 0;
     
     // Now calculate the wire length
-    if (wiring) calcWireLength(layoutStack, maxArraySize);
-    if (verbose && wiring) cout << "totalWireLength = " << getWireLength() << " mm\n";
-
+    /*
+    if (wiring) calcNetLength(layoutStack, maxArraySize);
+    if (verbose && wiring) cout << "totalWireLength = " << getNetLength() << " mm\n";
+    */
     free(centerItems);
     free(layoutStack);
     free(backupItems);
@@ -1149,9 +1234,29 @@ bool FPContainer::detectOverlap(FPObject ** layoutStack, int curDepth, FPObject 
     return true;
 }
 
-void FPContainer::calcWireLength(FPObject ** layoutStack, int count) {    
+void FPNet::calcNetLength() {    
     double totalWireLength = 0;
     double thisWireLength = 0;
+    
+    for (int i = 0; i < getMaxItemCount(); i++) {
+        FPObject * comp1 = getComponent(i);
+        FPObject * comp2 = getComponent(i+1);
+        if (!comp1 || !comp2) break;
+        thisWireLength = abs(comp1->getXc() - comp2->getXc()) + abs(comp1->getYc() - comp2->getYc());
+        totalWireLength += thisWireLength;
+        if (verbose) cout << comp1->getUniqueName() << " is connected to " << comp2->getUniqueName()
+                          << " from (" << comp1->getXc() << ", " << comp1->getYc() << ") to ("
+                          << comp2->getXc() << ", " << comp2->getYc() << ")"
+                          << " with the distance = " << thisWireLength << " mm\n";
+
+
+    }
+    
+    netLength = totalWireLength;
+}
+    
+    //Calculate for the net length of all connections
+    /*
     for (int i = 0; i <= count; i++) {
         FPObject * comp1 = layoutStack[i];
         if (!comp1) break;       
@@ -1167,9 +1272,7 @@ void FPContainer::calcWireLength(FPObject ** layoutStack, int count) {
                               
         }
     }
-    
-    wireLength = totalWireLength;
-}
+    */
 
 
 void geogLayout::outputHotSpotLayout(ostream& o, double startX, double startY) {
@@ -1198,10 +1301,20 @@ Legalize::Legalize() {
 }
 */
 
-void FPContainer::outputWireLength(ostream& o) {
-    o << "# Total Wire Length: " << getWireLength() << " mm\n";
+
+void FPContainer::calcNetLength() {
+    FPNet * net = new FPNet();
+    for (int i = 0; i < net->getMaxItemCount(); i++) {
+        net = nets[i];
+        if (!net) break;
+        net->calcNetLength();
+        totalNetsLength += net->getNetLength();        
+    }
 }
 
+void FPNet::outputNetLength(ostream& o) {
+    o << "# Total Wire Length: " << getNetLength() << " mm\n";
+}
 // Output Helpers.
 
 ostream& outputHotSpotHeader(const char * filename) {
@@ -1231,6 +1344,22 @@ string getStringFromInt(int in) {
     stringstream ss;
     ss << in;
     return ss.str();
+}
+
+ostream& outputBlockFileHeader(const char * filename) {
+    cout << "Outputing .blocks file to: " << filename << "\n";
+    
+    // Reset the name to counts map for this output.
+    NameCounts.clear();
+
+    ofstream& out = *(new ofstream(filename));
+    out << "UCSC blocks  1.0\n\n";
+    
+    return out;
+}
+
+void outputBlockFileFooter(ostream& o) {
+    delete(&o);
 }
 
 /*

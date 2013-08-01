@@ -1,0 +1,85 @@
+# Makefile for C/C++ beginners
+# 
+# This attempts to be a universal / automatic Makefile for small
+# C/C++ projects (such as homework / assignments) with automatic
+# dependency generation, but without autoconf hassle. The initial
+# motivation for this were repeated requests by coderis I tutored 
+# who could build their projects in Microsoft's IDE, but were 
+# unable to compile them using 'make' in GNU/Linux.
+#
+# Send comments to Andreas Stieger <andreas.stieger@gmx.de>
+###############################################################
+# the compiler commands we use
+
+CC=gcc
+CPP=g++
+
+# uncomment this for normal build
+
+# CFLAGS=-Wall -O3
+# CPPFLAGS=-Wall -O3
+
+# uncomment this for debug build
+
+CFLAGS=-Wall -g
+CPPFLAGS=-Wall -g
+
+# define a basic target "helloworld"
+
+TARGET=helloworld
+
+# define the object files. 
+# For every class Foo, with files foo.cpp and foo.h, add foo.o here.
+
+OBJS=helloworld.o
+
+###############################################################
+LINK=$(CPP) $(CPPFLAGS)
+#LINK=$(CC) $(CFLAGS)
+LFLAGS=-lm
+
+.SUFFIXES:
+.SUFFIXES: .d .o .h .c .cc .cp .cxx .cpp .c++ .CPP .C
+.c.o:   ; $(CC)  $(CFLAGS)   -MMD -c $*.c
+.cc.o:  ; $(CPP) $(CPPFLAGS) -MMD -c $*.cc
+.cp.o:  ; $(CPP) $(CPPFLAGS) -MMD -c $*.cp 
+.cxx.o: ; $(CPP) $(CPPFLAGS) -MMD -c $*.cxx 
+.cpp.o: ; $(CPP) $(CPPFLAGS) -MMD -c $*.cpp
+.c++.o: ; $(CPP) $(CPPFLAGS) -MMD -c $*.c++
+.CPP.o: ; $(CPP) $(CPPFLAGS) -MMD -c $*.CPP
+.C.o:   ; $(CPP) $(CPPFLAGS) -MMD -c $*.C
+
+%.d: %.c
+	touch $@
+%.d: %.cc
+	touch $@
+%.d: %.cp
+	touch $@
+%.d: %.cxx
+	touch $@
+%.d: %.cpp
+	touch $@
+%.d: %.c++
+	touch $@
+%.d: %.CPP
+	touch $@
+%.d: %.C
+	touch $@
+
+DEPENDENCIES = $(OBJS:.o=.d)
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(LINK) $(FLAGS) -o $(TARGET) $(OBJS) $(LFLAGS)
+
+.PHONY: clean
+
+clean:
+	-rm -f $(TARGET) $(OBJS) $(DEPENDENCIES) make.dep
+
+
+make.dep: $(DEPENDENCIES)
+	-cat $(DEPENDENCIES) > make.dep
+
+include make.dep

@@ -1,0 +1,16 @@
+UCSC blocks  1.0
+
+
+NumSoftRectangularBlocks : 	8
+NumHardRectilinearBlocks : 	0
+NumTerminals : 	0
+
+eR11 softrectangular 4	3	1
+eL11 softrectangular 4	3	1
+eLReven1 softrectangular 10	5	1
+eLReven2 softrectangular 10	5	1
+eTBeven1 softrectangular 10	5	1
+eTBeven2 softrectangular 10	5	1
+eB11 softrectangular 4	3	1
+eT11 softrectangular 4	3	1
+
