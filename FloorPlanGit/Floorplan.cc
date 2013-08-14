@@ -175,7 +175,6 @@ void FPObject::setCenter(double xcArg, double ycArg) {
 }
 
 int FPNet::maxItemCount = 50;
-int FPContainer::maxNetCount = 50;
 
 FPNet::FPNet() {
     refCount = 0;
@@ -241,6 +240,8 @@ void FPObject::outputHotSpotLayout(ostream& o, double startX, double startY) {
             << "\t" << calcX(startX) / 1000 << "\t" << calcY(startY) / 1000 << "\n";
 }
 
+//@todo This seems to only allow 2 levels of FPObject Components
+//      We might need to add a recursive component count
 void FPContainer::outputBlockFile(ostream& o) {
     
     int totalCount = 0;
@@ -261,6 +262,37 @@ void FPContainer::outputBlockFile(ostream& o) {
               << "\n";
         }
     }
+    
+}
+//@todo
+void FPContainer::outputNetsFile(ostream& o) {
+    
+    int totalNetsCount = 0;
+    for (int i = 0; i < getNetCount(); i++) {
+        int curNetsCount = getNet(i)->getItemCount();
+        totalNetsCount += curNetsCount * (curNetsCount - 1) / 2;
+    }
+    
+    
+    
+    o << "NumNets : " << totalNetsCount << "\n";
+    o << "NumPins : " << totalNetsCount * 2 << "\n\n"; //@todo: assume always bi-directional
+    
+    for (int i = 0; i < getNetCount(); i++) {
+        FPNet * net = getNet(i);
+        
+        for (int j = 0; j < net->getItemCount(); j++) {            
+            for (int k = j+1; k < net->getItemCount(); k++) {
+                o << "NetDegree : 2\n";
+                
+                
+                o << net->getComponent(j)->getName() << " B\n";
+                o << net->getComponent(k)->getName() << " B\n";
+            }
+            o << "\n";
+        }
+    }
+        
     
 }
 
@@ -339,12 +371,14 @@ bool FPCompWrapper::layout(FPOptimization opt, double ratio) {
 
 // Methods for the FPcontainer class.
 int FPContainer::maxItemCount = 50;
+int FPContainer::maxNetCount = 50;
 
 // Default constructor
 
 FPContainer::FPContainer() {
     itemCount = 0;
     items = new FPObject*[maxItemCount];
+    nets = new FPNet*[maxNetCount];
     count = 1;
     yMirror = false;
     xMirror = false;
@@ -416,12 +450,62 @@ FPObject * FPContainer::addComponentCluster(ComponentType type, int count, doubl
     return wrapComp;
 }
 
+FPObject * FPContainer::addComponentCluster(ComponentType type, int count, double area, double maxAspectRatio, double minAspectRatio, FPNet * net) {
+    // First generate a dummy component with the correct information.
+    dummyComponent * comp = new dummyComponent(type);
+    // We first need to create a wrapper for the component.
+    FPCompWrapper* wrapComp = new FPCompWrapper(comp, minAspectRatio, maxAspectRatio, area, count);
+    addComponent(wrapComp);
+    net->addWireTo(wrapComp);
+    return wrapComp;
+}
+
+FPObject * FPContainer::addComponentCluster(ComponentType type, int count, double area, double maxAspectRatio, double minAspectRatio, FPNet ** netList) {
+    // First generate a dummy component with the correct information.
+    dummyComponent * comp = new dummyComponent(type);
+    // We first need to create a wrapper for the component.
+    FPCompWrapper* wrapComp = new FPCompWrapper(comp, minAspectRatio, maxAspectRatio, area, count);
+    addComponent(wrapComp);    
+    FPNet * tNet = new FPNet();
+    for (int i = 0; i < tNet->getMaxItemCount(); i++) {
+        tNet = netList[i];
+        if (!tNet) break;
+        tNet->addWireTo(wrapComp);
+    }
+    return wrapComp;
+}
+
 FPObject * FPContainer::addComponentCluster(string name, int count, double area, double maxAspectRatio, double minAspectRatio) {
     // First generate a dummy component with the correct information.
     dummyComponent * comp = new dummyComponent(name);
     // We first need to create a wrapper for the component.
     FPCompWrapper* wrapComp = new FPCompWrapper(comp, minAspectRatio, maxAspectRatio, area, count);
     addComponent(wrapComp);
+    return wrapComp;
+}
+
+FPObject * FPContainer::addComponentCluster(string name, int count, double area, double maxAspectRatio, double minAspectRatio, FPNet * net) {
+    // First generate a dummy component with the correct information.
+    dummyComponent * comp = new dummyComponent(name);
+    // We first need to create a wrapper for the component.
+    FPCompWrapper* wrapComp = new FPCompWrapper(comp, minAspectRatio, maxAspectRatio, area, count);
+    addComponent(wrapComp);
+    net->addWireTo(wrapComp);
+    return wrapComp;
+}
+
+FPObject * FPContainer::addComponentCluster(string name, int count, double area, double maxAspectRatio, double minAspectRatio, FPNet ** netList) {
+    // First generate a dummy component with the correct information.
+    dummyComponent * comp = new dummyComponent(name);
+    // We first need to create a wrapper for the component.
+    FPCompWrapper* wrapComp = new FPCompWrapper(comp, minAspectRatio, maxAspectRatio, area, count);
+    addComponent(wrapComp);
+    FPNet * tNet = new FPNet();
+    for (int i = 0; i < tNet->getMaxItemCount(); i++) {
+        tNet = netList[i];
+        if (!tNet) break;
+        tNet->addWireTo(wrapComp);
+    }
     return wrapComp;
 }
 
@@ -794,8 +878,32 @@ FPObject * geogLayout::addComponentCluster(ComponentType type, int count, double
     return comp;
 }
 
+FPObject * geogLayout::addComponentCluster(ComponentType type, int count, double area, double maxARArg, double minARArg, GeographyHint hint, FPNet * net) {
+    FPObject * comp = FPContainer::addComponentCluster(type, count, area, maxARArg, minARArg, net);
+    comp->setHint(hint);
+    return comp;
+}
+
+FPObject * geogLayout::addComponentCluster(ComponentType type, int count, double area, double maxARArg, double minARArg, GeographyHint hint, FPNet ** netList) {
+    FPObject * comp = FPContainer::addComponentCluster(type, count, area, maxARArg, minARArg, netList);
+    comp->setHint(hint);
+    return comp;
+}
+
 FPObject * geogLayout::addComponentCluster(string name, int count, double area, double maxARArg, double minARArg, GeographyHint hint) {
     FPObject * comp = FPContainer::addComponentCluster(name, count, area, maxARArg, minARArg);
+    comp->setHint(hint);
+    return comp;
+}
+
+FPObject * geogLayout::addComponentCluster(string name, int count, double area, double maxARArg, double minARArg, GeographyHint hint, FPNet * net) {
+    FPObject * comp = FPContainer::addComponentCluster(name, count, area, maxARArg, minARArg, net);
+    comp->setHint(hint);
+    return comp;
+}
+
+FPObject * geogLayout::addComponentCluster(string name, int count, double area, double maxARArg, double minARArg, GeographyHint hint, FPNet ** netList) {
+    FPObject * comp = FPContainer::addComponentCluster(name, count, area, maxARArg, minARArg, netList);
     comp->setHint(hint);
     return comp;
 }
@@ -1256,7 +1364,7 @@ bool FPContainer::detectOverlap(FPObject ** layoutStack, int curDepth, FPObject 
     return true;
 }
 
-// At the moment, this is the only way to get the net length.
+// @todo At the moment, this is the only way to get the net length.
 // We don't actively update netLength, call this method to refresh the actual value.
 void FPNet::calcNetLength() {    
     double totalWireLength = 0;
@@ -1386,6 +1494,21 @@ void outputBlockFileFooter(ostream& o) {
     delete(&o);
 }
 
+ostream& outputNetsFileHeader(const char * filename) {
+    cout << "Outputing .nets file to: " << filename << "\n";
+    
+    // Reset the name to counts map for this output.
+    NameCounts.clear();
+
+    ofstream& out = *(new ofstream(filename));
+    out << "UCLA nets  1.0\n\n";
+    
+    return out;
+}
+
+void outputNetsFileFooter(ostream& o) {
+    delete(&o);
+}
 /*
 // Returns the difference between targetWidth/targetHeight and actual ones due to AR constraint
 // TODO: Evaluate the newAR as well.

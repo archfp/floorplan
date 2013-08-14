@@ -177,10 +177,10 @@ public:
     void addWireTo(FPObject * c);
     FPObject * removeWireTo(int index); 
     
-    void           outputNetLength(ostream& o);
-    int            getItemCount() { return itemCount; }
-    double         getNetLength() { return netLength; }
-    double         getMaxItemCount() { return maxItemCount; }
+    void           outputNetLength(ostream& o); //@todo why this?
+    int            getItemCount() { return itemCount; } //@todo why here?
+    double         getNetLength() { return netLength; } //@todo why not calculated at the end?
+    double         getMaxItemCount() { return maxItemCount; } 
     FPObject *     getComponent(int index) { return items[index]; }
     void           calcNetLength();
 };
@@ -250,11 +250,15 @@ protected:
 
     // These allow safe access to the item list.
     int        getComponentCount()          { return itemCount; }
+    int        getNetCount()                { return netCount; }
     FPObject * getComponent(int index)      { return items[index]; }
+    FPNet *    getNet(int index)            { return nets[index]; }
     FPObject * removeComponent(int index);
+    FPNet *    removeNet(int index);
     void       replaceComponent (FPObject * comp, int index);
     void       addComponentToFront (FPObject * comp);
     void       sortByArea();
+    //TODO: removeNet
 
 public:
     FPContainer();
@@ -276,10 +280,17 @@ public:
     virtual bool           layout (FPOptimization opt, double targetAR =  1.0) = 0;
     virtual void           outputHotSpotLayout(ostream& o, double startX = 0.0, double startY = 0.0) = 0;
             void           outputBlockFile(ostream& o);
+            void           outputNetsFile(ostream& o);
 
     // Ways to add components.
     virtual FPObject *     addComponentCluster (ComponentType type, int count, double area, double maxARArg, double minARArg);
-    virtual FPObject *     addComponentCluster (string name, int count, double area, double maxARArg, double minARArg);
+    virtual FPObject *     addComponentCluster (ComponentType type, int count, double area, double maxARArg, double minARArg, FPNet * net);
+    virtual FPObject *     addComponentCluster (ComponentType type, int count, double area, double maxARArg, double minARArg, FPNet ** netList);
+    
+    virtual FPObject *     addComponentCluster (string name, int count, double area, double maxARArg, double minARArg);    
+    virtual FPObject *     addComponentCluster (string name, int count, double area, double maxARArg, double minARArg, FPNet * net);
+    virtual FPObject *     addComponentCluster (string name, int count, double area, double maxARArg, double minARArg, FPNet ** netList);
+    
     virtual void           addComponent (FPObject * comp);
     virtual void           addComponent (FPObject * comp, int count);
     
@@ -355,7 +366,11 @@ public:
     virtual bool       layout (FPOptimization opt, double targetAR =  1.0);
     virtual void       outputHotSpotLayout(ostream& o, double startX = 0.0, double startY = 0.0);
     virtual FPObject * addComponentCluster (ComponentType type, int count, double area, double maxARArg, double minARArg, GeographyHint hint);
+    virtual FPObject * addComponentCluster (ComponentType type, int count, double area, double maxARArg, double minARArg, GeographyHint hint, FPNet * net);
+    virtual FPObject * addComponentCluster (ComponentType type, int count, double area, double maxARArg, double minARArg, GeographyHint hint, FPNet ** netList);    
     virtual FPObject * addComponentCluster (string name, int count, double area, double maxARArg, double minARArg, GeographyHint hint);
+    virtual FPObject * addComponentCluster (string name, int count, double area, double maxARArg, double minARArg, GeographyHint hint, FPNet * net);
+    virtual FPObject * addComponentCluster (string name, int count, double area, double maxARArg, double minARArg, GeographyHint hint, FPNet ** netList);
     virtual void       addComponent (FPObject * comp, int count, GeographyHint hint);
 };
 
@@ -390,3 +405,6 @@ string getStringFromInt(int in);
 
 ostream& outputBlockFileHeader(const char * filename);
 void outputBlockFileFooter(ostream& o);
+
+ostream& outputNetsFileHeader(const char * filename);
+void outputNetsFileFooter(ostream& o);

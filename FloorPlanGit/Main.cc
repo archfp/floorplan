@@ -18,28 +18,28 @@ void generateErrorCase()
     
     geogLayout * fp1 = new geogLayout();    
     FPNet * n1 = new FPNet(); FPNet * n2 = new FPNet();
+    FPNet ** ns; 
+    ns = new FPNet*[50];
+    
+    ns[0] = n1; ns[1] = n2;
     
     fp1->addNet(n1); fp1->addNet(n2);
         
     //Testcase 1 Top/Bottom/Left/Right    
-    fp1->addComponentCluster("eR1", 1, 4, 3., 1., Right);
-    fp1->addComponentCluster("eL1", 1, 4, 3., 1., Left);
+    fp1->addComponentCluster("eR1", 1, 4, 3., 1., Right, n1);
+    fp1->addComponentCluster("eL1", 1, 4, 3., 1., Left, n1);
    
     //Testcase 2 LeftRight/TopBottom
-    fp1->addComponentCluster("eLReven", 2, 10, 5., 1., LeftRight);
-    fp1->addComponentCluster("eTBeven", 2, 10, 5., 1., TopBottom);
+    fp1->addComponentCluster("eLReven", 2, 10, 5., 1., LeftRight, n1);
+    fp1->addComponentCluster("eTBeven", 2, 10, 5., 1., TopBottom, n2);
     
-    fp1->addComponentCluster("eB1", 1, 4, 3., 1., Bottom);
-    fp1->addComponentCluster("eT1", 1, 4, 3., 1., Top);
-    
-    //If I would like to add this specific component after it is defined
-    //n1->addWireTo("eR1");  
-    //n1->addWireTo("eL1");
+    fp1->addComponentCluster("eB1", 1, 4, 3., 1., Bottom, n2);
+    fp1->addComponentCluster("eT1", 1, 4, 3., 1., Top, n2);
     
     
     //Testcase 2.1 LeftRight/TopBottom with odd count
-    //fp1->addComponentCluster("eLRodd", 3, 9, 5., 1., LeftRight);
-    //fp1->addComponentCluster("eTBodd", 5, 9, 3., 1., TopBottom);
+    fp1->addComponentCluster("eLRodd", 3, 9, 5., 1., LeftRight, ns);
+    fp1->addComponentCluster("eTBodd", 5, 9, 3., 1., TopBottom, ns);
     
     //Testcase 3 Mirror
     //fp1->addComponentCluster("eLRMeven", 2, 11, 5., 1., LeftRightMirror);
@@ -76,9 +76,13 @@ void generateErrorCase()
     
     fp1->layout(AspectRatio, 1.0);
     
+    ostream& PFPNetsOut = outputNetsFileHeader("test.nets");
+    fp1->outputNetsFile(PFPNetsOut);
+    outputNetsFileFooter(PFPNetsOut);
+    
+    
     ostream& HSOut = outputHotSpotHeader("testDoubleWire.flp");
     fp1->outputHotSpotLayout(HSOut);
-    //fp1->outputWireLength(HSOut);
     outputHotSpotFooter(HSOut);
     
     
@@ -728,7 +732,7 @@ int main(int argc, char* argv[])
   //generateErrorCase2();
   //generateErrorCase3();
   //callSetupExamples();
-  generateTRIPS_Examples();
+  //generateTRIPS_Examples();
 
   return 0;
 }
