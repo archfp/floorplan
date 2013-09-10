@@ -1,0 +1,66 @@
+UCLA nets   1.0
+
+
+NumNets : 20
+NumPins : 40
+
+NetDegree : 2  N0
+eR1 B : 	%0	 %0
+eL1 B : 	%0	 %0
+NetDegree : 2  N1
+eR1 B : 	%0	 %0
+eLReven B : 	%0	 %0
+NetDegree : 2  N2
+eR1 B : 	%0	 %0
+eLRodd B : 	%0	 %0
+NetDegree : 2  N3
+eR1 B : 	%0	 %0
+eTBodd B : 	%0	 %0
+NetDegree : 2  N4
+eL1 B : 	%0	 %0
+eLReven B : 	%0	 %0
+NetDegree : 2  N5
+eL1 B : 	%0	 %0
+eLRodd B : 	%0	 %0
+NetDegree : 2  N6
+eL1 B : 	%0	 %0
+eTBodd B : 	%0	 %0
+NetDegree : 2  N7
+eLReven B : 	%0	 %0
+eLRodd B : 	%0	 %0
+NetDegree : 2  N8
+eLReven B : 	%0	 %0
+eTBodd B : 	%0	 %0
+NetDegree : 2  N9
+eLRodd B : 	%0	 %0
+eTBodd B : 	%0	 %0
+NetDegree : 2  N10
+eTBeven B : 	%0	 %0
+eB1 B : 	%0	 %0
+NetDegree : 2  N11
+eTBeven B : 	%0	 %0
+eT1 B : 	%0	 %0
+NetDegree : 2  N12
+eTBeven B : 	%0	 %0
+eLRodd B : 	%0	 %0
+NetDegree : 2  N13
+eTBeven B : 	%0	 %0
+eTBodd B : 	%0	 %0
+NetDegree : 2  N14
+eB1 B : 	%0	 %0
+eT1 B : 	%0	 %0
+NetDegree : 2  N15
+eB1 B : 	%0	 %0
+eLRodd B : 	%0	 %0
+NetDegree : 2  N16
+eB1 B : 	%0	 %0
+eTBodd B : 	%0	 %0
+NetDegree : 2  N17
+eT1 B : 	%0	 %0
+eLRodd B : 	%0	 %0
+NetDegree : 2  N18
+eT1 B : 	%0	 %0
+eTBodd B : 	%0	 %0
+NetDegree : 2  N19
+eLRodd B : 	%0	 %0
+eTBodd B : 	%0	 %0

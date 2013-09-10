@@ -1,0 +1,75 @@
+UCLA nets  1.0
+
+NumNets : 20
+NumPins : 40
+
+NetDegree : 2
+eR1 B
+eL1 B
+NetDegree : 2
+eR1 B
+eLReven B
+NetDegree : 2
+eR1 B
+eLRodd B
+NetDegree : 2
+eR1 B
+eTBodd B
+
+NetDegree : 2
+eL1 B
+eLReven B
+NetDegree : 2
+eL1 B
+eLRodd B
+NetDegree : 2
+eL1 B
+eTBodd B
+
+NetDegree : 2
+eLReven B
+eLRodd B
+NetDegree : 2
+eLReven B
+eTBodd B
+
+NetDegree : 2
+eLRodd B
+eTBodd B
+
+
+NetDegree : 2
+eTBeven B
+eB1 B
+NetDegree : 2
+eTBeven B
+eT1 B
+NetDegree : 2
+eTBeven B
+eLRodd B
+NetDegree : 2
+eTBeven B
+eTBodd B
+
+NetDegree : 2
+eB1 B
+eT1 B
+NetDegree : 2
+eB1 B
+eLRodd B
+NetDegree : 2
+eB1 B
+eTBodd B
+
+NetDegree : 2
+eT1 B
+eLRodd B
+NetDegree : 2
+eT1 B
+eTBodd B
+
+NetDegree : 2
+eLRodd B
+eTBodd B
+
+

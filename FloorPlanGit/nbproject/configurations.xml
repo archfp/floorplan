@@ -19,9 +19,97 @@
         </df>
         <df name="130223 Updated Output">
         </df>
+        <df name="2013-08-27">
+          <in>Alternate-25.flp</in>
+          <in>CMP8Core.flp</in>
+          <in>CheckAlternate.flp</in>
+          <in>CheckBoard.flp</in>
+          <in>CheckCentered.flp</in>
+          <in>McPAT_16x4.flp</in>
+          <in>McPAT_32x1.flp</in>
+          <in>McPAT_32x2.flp</in>
+          <in>McPAT_64x1.flp</in>
+          <in>McPAT_8x8.flp</in>
+          <in>Penryn45.flp</in>
+          <in>Regular-25.flp</in>
+          <in>Regular-50.flp</in>
+          <in>Rotated-25.flp</in>
+          <in>TRIPS-Core.flp</in>
+          <in>TRIPS-Final.blocks</in>
+          <in>TRIPS-Final.flp</in>
+          <in>alphaOneHalf.flp</in>
+          <in>alphaTwo.flp</in>
+          <in>alphadup.flp</in>
+        </df>
         <df name="Optimized Output">
         </df>
+        <df name="Optimized-2013-08-26">
+          <in>Alternate-25.flp</in>
+          <in>CMP8Core.flp</in>
+          <in>CheckAlternate.flp</in>
+          <in>CheckBoard.flp</in>
+          <in>CheckCentered.flp</in>
+          <in>McPAT_16x4.flp</in>
+          <in>McPAT_32x1.flp</in>
+          <in>McPAT_32x2.flp</in>
+          <in>McPAT_64x1.flp</in>
+          <in>McPAT_8x8.flp</in>
+          <in>Penryn45.flp</in>
+          <in>Regular-25.flp</in>
+          <in>Regular-50.flp</in>
+          <in>Rotated-25.flp</in>
+          <in>TRIPS-Core.flp</in>
+          <in>TRIPS-Final.blocks</in>
+          <in>TRIPS-Final.flp</in>
+          <in>alphaOneHalf.flp</in>
+          <in>alphaTwo.flp</in>
+          <in>alphadup.flp</in>
+        </df>
         <df name="Original Output">
+        </df>
+        <df name="Outputs-2013-08-26">
+          <in>Alternate-25.flp</in>
+          <in>CheckAlternate.flp</in>
+          <in>CheckBoard.flp</in>
+          <in>CheckCentered.flp</in>
+          <in>McPAT_16x4.flp</in>
+          <in>McPAT_32x1.flp</in>
+          <in>McPAT_32x2.flp</in>
+          <in>McPAT_64x1.flp</in>
+          <in>McPAT_8x8.flp</in>
+          <in>Penryn45.flp</in>
+          <in>Regular-25.flp</in>
+          <in>Regular-50.flp</in>
+          <in>Rotated-25.flp</in>
+          <in>TRIPS-Core.flp</in>
+          <in>TRIPS-Final.blocks</in>
+          <in>TRIPS-Final.flp</in>
+          <in>alphaOneHalf.flp</in>
+          <in>alphaTwo.flp</in>
+          <in>alphadup.flp</in>
+        </df>
+        <df name="Outputs-2013-08-26-Fixed">
+          <in>Alternate-25.flp</in>
+          <in>CMP8Core.flp</in>
+          <in>CheckAlternate.flp</in>
+          <in>CheckBoard.flp</in>
+          <in>CheckCentered.flp</in>
+          <in>McPAT_16x4.flp</in>
+          <in>McPAT_32x1.flp</in>
+          <in>McPAT_32x2.flp</in>
+          <in>McPAT_64x1.flp</in>
+          <in>McPAT_8x8.flp</in>
+          <in>Penryn45.flp</in>
+          <in>Regular-25.flp</in>
+          <in>Regular-50.flp</in>
+          <in>Rotated-25.flp</in>
+          <in>TRIPS-Core.flp</in>
+          <in>TRIPS-Final.blocks</in>
+          <in>TRIPS-Final.flp</in>
+          <in>alphaOneHalf.flp</in>
+          <in>alphaTwo.flp</in>
+          <in>alphadup.flp</in>
+          <in>output-cmd-2</in>
         </df>
       </df>
       <df name="toFig">

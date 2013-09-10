@@ -12,6 +12,7 @@
 #include <cmath>
 #include "MathUtil.hh"
 #include "Floorplan.hh"
+
 // This testcase is to check the bottom-up fixups feature
 void generateErrorCase()
 {
@@ -728,11 +729,11 @@ int main(int argc, char* argv[])
   ///////////////////////////////////////////////////////
   // Look at these subroutines above for examples of how to build floorplans using this tool.
   //////////////////////////////////////////////////////
-  generateErrorCase();
+  //generateErrorCase();
   //generateErrorCase2();
   //generateErrorCase3();
-  //callSetupExamples();
-  //generateTRIPS_Examples();
+  callSetupExamples();
+  generateTRIPS_Examples();
 
   return 0;
 }

@@ -3,7 +3,7 @@ OBJS     = Main.o Floorplan.o MathUtil.o
 GPP	 = g++ -Wall
 
 #Charles: Originally --> "-O3 -g"
-CFLAGS	 = -O0 -g
+CFLAGS	 = -O3 -g
 #LDFLAGS = -lmcheck
 
 $(PROG): $(OBJS) 

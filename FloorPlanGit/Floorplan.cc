@@ -21,18 +21,27 @@
 // This will be used to keep track of user's request for more output during layout.
 bool verbose = true;
  
-bool legalizing = true; // Flag for legalization
+// Flag for legalization
+bool legalizing = true;
 
-bool changeArea = true; // This is used to turn on/off whether we need to keep the same area after legalizing the layout.
+// This is used to turn on/off whether we need to keep the same area after legalizing the layout.
+bool changeArea = true; 
+
+// Once an item is placed at right or top, mark = false;
 bool rightMark = true;
-bool topMark = true; // Once an item is placed at right or top, mark = false;
+bool topMark = true; 
 
-bool topBottomInversion = true; // TopBottom items can be inverted to BottomTop order
+// TopBottom items can be inverted to BottomTop order
+bool topBottomInversion = false; 
 
-bool checkOverlap = true; // Overlap detection 
-double expandHeight = 0, expandWidth = 0; //Overlap area expansion
+// Overlap detection to allow legalization
+bool checkOverlap = true; 
 
-bool wiring = true; // Wire length calculation
+// Overlap area expansion
+double expandHeight = 0, expandWidth = 0; 
+
+// Wire length calculation
+bool wiring = true; 
 
 // Temporary local for crazy mirror reflection stuff.
 #define maxMirrorDepth 50
@@ -1308,7 +1317,7 @@ bool FPContainer::detectOverlap(FPObject ** layoutStack, int curDepth, FPObject 
         y1 = stackFPLayout->getY();
         h1 = stackFPLayout->getHeight();
         w1 = stackFPLayout->getWidth();
-        d = 0.00000001; //for rounding error
+        d = 0.00001; //for rounding error
 
         if (x2 > x1 && w1 - (x2 - x1) > d) {
             widthOver = w1 - (x2 - x1);

@@ -1,0 +1,14 @@
+UMICH blocks 1.0
+
+
+
+eR11	14.6491	0	DIMS = (2, 2)	: FN
+eL11	12.6491	0	DIMS = (2, 2)	: N
+eLReven1	9.48683	0	DIMS = (3.16228, 3.16228)	: FN
+eLReven2	0	0	DIMS = (3.16228, 3.16228)	: FN
+eTBeven1	3.16228	0	DIMS = (3.16228, 3.16228)	: FE
+eTBeven2	6.32456	0	DIMS = (3.16228, 3.16228)	: FN
+eB11	0	0	DIMS = (3.4641, 1.1547)	: N
+eT11	0	0	DIMS = (3.4641, 1.1547)	: N
+
+
