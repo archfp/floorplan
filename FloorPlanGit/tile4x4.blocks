@@ -1,0 +1,22 @@
+UCSC blocks  1.0
+
+NumSoftRectangularBlocks : 16
+NumHardRectilinearBlocks : 0
+NumTerminals : 0
+
+B11	softrectangular	1	1	1
+B21	softrectangular	1	1	1
+B31	softrectangular	1	1	1
+B41	softrectangular	1	1	1
+B51	softrectangular	1	1	1
+B61	softrectangular	1	1	1
+B71	softrectangular	1	1	1
+B81	softrectangular	1	1	1
+B131	softrectangular	1	1	1
+B141	softrectangular	1	1	1
+B151	softrectangular	1	1	1
+B161	softrectangular	1	1	1
+B91	softrectangular	1	1	1
+B101	softrectangular	1	1	1
+B111	softrectangular	1	1	1
+B121	softrectangular	1	1	1

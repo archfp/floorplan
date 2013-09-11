@@ -13,7 +13,118 @@
 #include "MathUtil.hh"
 #include "Floorplan.hh"
 
+
+
+void generate_4x4_tile()
+{
+    geogLayout * basic = new geogLayout();
+    FPNet ** ns = (FPNet **) malloc(sizeof (FPNet *) * 24);
+    for (int i = 0; i < 24; ++i) {
+        ns[i] = 0;
+        ns[i] = new FPNet();
+        basic->addNet(ns[i]);
+    }
+    
+    FPNet ** n1 = (FPNet **) malloc(sizeof (FPNet *) * 2); 
+    for (int i = 0; i < 2; ++i) n1[i] = 0;  
+    n1[0] = ns[0]; n1[1] = ns[12];
+        
+    FPNet ** n2 = (FPNet **) malloc(sizeof (FPNet *) * 3); 
+    for (int i = 0; i < 3; ++i) n2[i] = 0;
+    n2[0] = ns[0]; n2[1] = ns[1]; n2[2] = ns[15];
+        
+    FPNet ** n3 = (FPNet **) malloc(sizeof (FPNet *) * 3); 
+    for (int i = 0; i < 3; ++i) n3[i] = 0;
+    n3[0] = ns[1]; n3[1] = ns[2]; n3[2] = ns[18];
+    
+    FPNet ** n4 = (FPNet **) malloc(sizeof (FPNet *) * 2);
+    for (int i = 0; i < 2; ++i) n4[i] = 0;
+    n4[0] = ns[2]; n4[1] = ns[21];
+    
+    FPNet ** n5 = (FPNet **) malloc(sizeof (FPNet *) * 3);
+    for (int i = 0; i < 3; ++i) n5[i] = 0;
+    n5[0] = ns[3]; n5[1] = ns[12]; n5[2] = ns[13];
+       
+    FPNet ** n6 = (FPNet **) malloc(sizeof (FPNet *) * 4);
+    for (int i = 0; i < 4; ++i) n6[i] = 0;
+    n6[0] = ns[3]; n6[1] = ns[4]; n6[2] = ns[15]; n6[3] = ns[16];
+    
+    FPNet ** n7 = (FPNet **) malloc(sizeof (FPNet *) * 4);
+    for (int i = 0; i < 4; ++i) n7[i] = 0;
+    n7[0] = ns[4]; n7[1] = ns[5]; n7[2] = ns[18]; n7[3] = ns[19];
+    
+    FPNet ** n8 = (FPNet **) malloc(sizeof (FPNet *) * 3); 
+    for (int i = 0; i < 3; ++i) n8[i] = 0;
+    n8[0] = ns[5]; n8[1] = ns[21]; n8[2] = ns[22];
+     
+    FPNet ** n9 = (FPNet **) malloc(sizeof (FPNet *) * 3);
+    for (int i = 0; i < 3; ++i) n9[i] = 0;
+    n9[0] = ns[6]; n9[1] = ns[13]; n9[2] = ns[14];
+       
+    FPNet ** n10 = (FPNet **) malloc(sizeof (FPNet *) * 4); 
+    for (int i = 0; i < 4; ++i) n10[i] = 0;
+    n10[0] = ns[6]; n10[1] = ns[7]; n10[2] = ns[16]; n10[3] = ns[17];
+       
+    FPNet ** n11 = (FPNet **) malloc(sizeof (FPNet *) * 4); 
+    for (int i = 0; i < 4; ++i) n11[i] = 0;
+    n11[0] = ns[7]; n11[1] = ns[8]; n11[2] = ns[19]; n11[3] = ns[20];
+    
+    FPNet ** n12 = (FPNet **) malloc(sizeof (FPNet *) * 3); 
+    for (int i = 0; i < 3; ++i) n12[i] = 0;
+    n12[0] = ns[8]; n12[1] = ns[22]; n12[2] = ns[23];
+        
+    FPNet ** n13 = (FPNet **) malloc(sizeof (FPNet *) * 2);
+    for (int i = 0; i < 2; ++i) n13[i] = 0;
+    n13[0] = ns[9]; n13[1] = ns[14];
+       
+    FPNet ** n14 = (FPNet **) malloc(sizeof (FPNet *) * 3); 
+    for (int i = 0; i < 3; ++i) n14[i] = 0;
+    n14[0] = ns[9]; n14[1] = ns[10]; n14[2] = ns[17];
+    
+    FPNet ** n15 = (FPNet **) malloc(sizeof (FPNet *) * 3); 
+    for (int i = 0; i < 3; ++i) n15[i] = 0;
+    n15[0] = ns[10]; n15[1] = ns[11]; n15[2] = ns[20];
+    
+    FPNet ** n16 = (FPNet **) malloc(sizeof (FPNet *) * 3); 
+    for (int i = 0; i < 3; ++i) n16[i] = 0;
+    n16[0] = ns[11]; n16[1] = ns[23];
+    
+    basic->addComponentCluster("B1", 1, 1, 1, 1, Bottom, n1);
+    basic->addComponentCluster("B2", 1, 1, 1, 1, Right, n2);
+    basic->addComponentCluster("B3", 1, 1, 1, 1, Right, n3);
+    basic->addComponentCluster("B4", 1, 1, 1, 1, Right, n4);
+    basic->addComponentCluster("B5", 1, 1, 1, 1, Bottom, n5);
+    basic->addComponentCluster("B6", 1, 1, 1, 1, Right, n6);
+    basic->addComponentCluster("B7", 1, 1, 1, 1, Right, n7);
+    basic->addComponentCluster("B8", 1, 1, 1, 1, Right, n8);
+    basic->addComponentCluster("B13", 1, 1, 1, 1, Top, n13);
+    basic->addComponentCluster("B14", 1, 1, 1, 1, Top, n14);
+    basic->addComponentCluster("B15", 1, 1, 1, 1, Top, n15);
+    basic->addComponentCluster("B16", 1, 1, 1, 1, Top, n16);
+    basic->addComponentCluster("B9", 1, 1, 1, 1, Top, n9);
+    basic->addComponentCluster("B10", 1, 1, 1, 1, Top, n10);
+    basic->addComponentCluster("B11", 1, 1, 1, 1, Top, n11);
+    basic->addComponentCluster("B12", 1, 1, 1, 1, Top, n12);
+    
+    //Output to .blocks
+    ostream& PFPOut = outputBlockFileHeader("tile4x4.blocks");
+    basic->outputBlockFile(PFPOut);
+    outputBlockFileFooter(PFPOut);
+    
+    basic->layout(AspectRatio, 1.0);
+    
+    ostream& PFPNetsOut = outputNetsFileHeader("tile4x4.nets");
+    basic->outputNetsFile(PFPNetsOut);
+    outputNetsFileFooter(PFPNetsOut);
+    
+    ostream& HSOut = outputHotSpotHeader("tile4x4.flp");
+    basic->outputHotSpotLayout(HSOut);
+    outputHotSpotFooter(HSOut);
+}
+
+
 // This testcase is to check the bottom-up fixups feature
+/*
 void generateErrorCase()
 {
     
@@ -88,7 +199,7 @@ void generateErrorCase()
     
     
 }
-    
+*/    
 void generateErrorCase2() {
     geogLayout * fp2 = new geogLayout();
     fp2->addComponentCluster("e1", 1, 4, 2., 1., Top);
@@ -732,8 +843,9 @@ int main(int argc, char* argv[])
   //generateErrorCase();
   //generateErrorCase2();
   //generateErrorCase3();
-  callSetupExamples();
-  generateTRIPS_Examples();
+  //callSetupExamples();
+  //generateTRIPS_Examples();
+  generate_4x4_tile();
 
   return 0;
 }
