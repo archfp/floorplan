@@ -91,7 +91,7 @@ void generate_4x4_tile()
     
     basic->addComponentCluster("B1", 1, 1, 1, 1, Bottom, n1);
     basic->addComponentCluster("B2", 1, 1, 1, 1, Right, n2);
-    basic->addComponentCluster("B3", 1, 1, 1, 1, Right, n3);
+    basic->addComponentCluster("B3", 1, 1, 1, 1, Top, n3);
     basic->addComponentCluster("B4", 1, 1, 1, 1, Right, n4);
     basic->addComponentCluster("B5", 1, 1, 1, 1, Bottom, n5);
     basic->addComponentCluster("B6", 1, 1, 1, 1, Right, n6);
