@@ -1,0 +1,53 @@
+UCLA nets    1.0
+
+NumNets : 17
+NumPins : 34
+
+NetDegree : 2  s_bsp-bspvld
+s_bsp B
+bspvld B
+NetDegree : 2  s_bsp-vbvvcv1
+s_bsp B
+vbvvcv1 B
+NetDegree : 2  s_bsp-s_smtxtr
+s_bsp B
+s_smtxtr B
+NetDegree : 2  s_bsp-s_dblk
+s_bsp B
+s_dblk B
+NetDegree : 2  s_smtxtr-smtxtr
+s_smtxtr B
+smtxtr B
+NetDegree : 2  s_smtxtr-vcv2
+s_smtxtr B
+vcv2 B
+NetDegree : 2  s_smtxtr-s_rcns
+s_smtxtr B
+s_rcns B
+NetDegree : 2  s_rcns-rcns
+s_rcns B
+rcns B
+NetDegree : 2  s_rcns-vcv3
+s_rcns B
+vcv3 B
+NetDegree : 2  s_rcns-s_pad
+s_rcns B
+s_pad B
+NetDegree : 2  s_pad-pad1
+s_pad B
+pad1 B
+NetDegree : 2  s_pad-pad2
+s_pad B
+pad2 B
+NetDegree : 2 s_pad-vmv
+s_pad B
+vmv B
+NetDegree : 2 s_pad-s_dblk
+s_pad B
+s_dblk B
+NetDegree : 2 s_dblk-drng
+s_dblk B
+drng B
+NetDegree : 2 s_dblk-dblk
+s_dblk B
+dblk B

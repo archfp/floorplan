@@ -1,0 +1,108 @@
+# mpeg-4 core profile level 2, no de-blocking or de-ringing
+
+define computation
+
+bsp 52
+volp 52
+vld1 500
+vld2 500
+shpe 68
+motn1 110
+motn2 110
+motn3 110
+motn4 110
+motn5 110
+motn6 110
+motn7 110
+txtr1 119
+txtr2 119
+txtr3 119
+txtr4 119
+txtr5 119
+txtr6 119
+txtr7 119
+txtr8 119
+txtr9 119
+txtr10 119
+txtr11 119
+txtr12 119
+rcns 468
+pad1 110
+pad2 110
+pad3 110
+pad4 110
+pad5 110
+pad6 110
+
+vbv 160
+vcv1 100
+vcv2 150
+vcv3 300
+vmv 892
+
+end
+
+define communication
+
+bsp vbv 250
+vbv volp 250
+volp vld1 250
+vld1 vld2 11604
+vld2 vcv1 11604
+vcv1 shpe 5088
+vcv1 motn1 773
+vcv1 motn2 773
+vcv1 motn3 773
+vcv1 motn4 773
+vcv1 motn5 773
+vcv1 motn6 773
+vcv1 motn7 773
+vcv1 txtr1 470
+vcv1 txtr2 470
+vcv1 txtr3 470
+vcv1 txtr4 470
+vcv1 txtr5 470
+vcv1 txtr6 470
+vcv1 txtr7 470
+vcv1 txtr8 470
+vcv1 txtr9 470
+vcv1 txtr10 470
+vcv1 txtr11 470
+vcv1 txtr12 470
+shpe vcv2 4164
+motn1 vcv2 632
+motn2 vcv2 632
+motn3 vcv2 632
+motn4 vcv2 632
+motn5 vcv2 632
+motn6 vcv2 632
+motn7 vcv2 632
+txtr1 vcv2 384
+txtr2 vcv2 384
+txtr3 vcv2 384
+txtr4 vcv2 384
+txtr5 vcv2 384
+txtr6 vcv2 384
+txtr7 vcv2 384
+txtr8 vcv2 384
+txtr9 vcv2 384
+txtr10 vcv2 384
+txtr11 vcv2 384
+txtr12 vcv2 384
+vcv2 rcns 13196
+rcns vcv3 22936
+vcv3 pad1 5652
+vcv3 pad2 5652
+vcv3 pad3 5652
+vcv3 pad4 5652
+vcv3 pad5 5652
+vcv3 pad6 5652
+pad1 vmv 5192
+pad2 vmv 5192
+pad3 vmv 5192
+pad4 vmv 5192
+pad5 vmv 5192
+pad6 vmv 5192
+vmv rcns 22936
+
+end

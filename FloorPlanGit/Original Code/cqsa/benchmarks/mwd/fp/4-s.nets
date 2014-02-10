@@ -1,0 +1,54 @@
+UCLA nets   1.0
+
+
+NumNets : 16
+NumPins : 32
+
+NetDegree : 2  s_in-in
+s_in B
+in B
+NetDegree : 2  s_in-nr
+s_in B
+nr B
+NetDegree : 2  s_in-mem1
+s_in B
+mem1 B
+NetDegree : 2  s_hs-hs
+s_hs B
+hs B
+NetDegree : 2  s_hs-vs
+s_hs B
+vs B
+NetDegree : 2  s_hs-jug1
+s_hs B
+jug1 B
+NetDegree : 2  s_mem2-mem2
+s_mem2 B
+mem2 B
+NetDegree : 2  s_mem2-hvs
+s_mem2 B
+hvs B
+NetDegree : 2  s_mem2-jug2
+s_mem2 B
+jug2 B
+NetDegree : 2  s_mem3-mem3
+s_mem3 B
+mem3 B
+NetDegree : 2  s_mem3-se
+s_mem3 B
+se B
+NetDegree : 2  s_mem3-blnd
+s_mem3 B
+blnd B
+NetDegree : 2  s_in-s_hs
+s_in B
+s_hs B
+NetDegree : 2  s_in-s_mem2
+s_in B
+s_mem2 B
+NetDegree : 2  s_hs-s_mem3
+s_hs B
+s_mem3 B
+NetDegree : 2  s_mem2-s_mem3
+s_mem2 B
+s_mem3 B

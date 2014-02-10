@@ -1,0 +1,143 @@
+UCLA nets    1.0
+
+NumNets : 42
+NumPins : 84
+
+NetDegree : 2 s_bspvolp-bspvolp
+s_bspvolp B
+bspvolp B
+NetDegree : 2 s_bspvolp-vbv
+s_bspvolp B
+vbv B
+NetDegree : 2 s_bspvolp-vldA
+s_bspvolp B
+vldA B
+
+NetDegree : 2 s_vldB-vldB
+s_vldB B
+vldB B
+NetDegree : 2 s_vldB-vcv1
+s_vldB B
+vcv1 B
+
+NetDegree : 2 s_shpe-shpe
+s_shpe B
+shpe B
+NetDegree : 2 s_shpe-motnA
+s_shpe B
+motnA B
+
+NetDegree : 2 s_motnB-motnB
+s_motnB B
+motnB B
+NetDegree : 2 s_motnB-txtrB
+s_motnB B
+txtrB B
+
+NetDegree : 2 s_txtrA-txtrA
+s_txtrA B
+txtrA B
+NetDegree : 2 s_txtrA-txtrC
+s_txtrA B
+txtrC B
+
+NetDegree : 2 s_txtrD-txtrD
+s_txtrD B
+txtrD B
+NetDegree : 2 s_txtrD-txtrE
+s_txtrD B
+txtrE B
+
+NetDegree : 2 s_vcv2-vcv2
+s_vcv2 B
+vcv2 B
+NetDegree : 2 s_vcv2-rcns
+s_vcv2 B
+rcns B
+
+NetDegree : 2 s_vcv3-vcv3
+s_vcv3 B
+vcv3 B
+
+NetDegree : 2 s_pad-padA
+s_pad B
+padA B
+NetDegree : 2 s_pad-padB
+s_pad B
+padB B
+NetDegree : 2 s_pad-padC
+s_pad B
+padC B
+
+NetDegree : 2 s_vmv-vmv
+s_vmv B
+vmv B
+NetDegree : 2 s_vmv-dblk
+s_vmv B
+dblk B
+
+NetDegree : 2 s_drngA-drngA
+s_drngA B
+drngA B
+NetDegree : 2 s_drngA-drngC
+s_drngA B
+drngC B
+NetDegree : 2 s_drngA-drngE
+s_drngA B
+drngE B
+
+NetDegree : 2 s_drngB-drngB
+s_drngB B
+drngB B
+NetDegree : 2 s_drngB-drngD
+s_drngB B
+drngD B
+NetDegree : 2 s_drngB-drngF
+s_drngB B
+drngF B
+
+NetDegree : 2 s_bspvolp-s_vldB
+s_bspvolp B
+s_vldB B
+NetDegree : 2 s_bspvolp-s_vcv2
+s_bspvolp B
+s_vcv2 B
+NetDegree : 2 s_vldB-s_shpe
+s_vldB B
+s_shpe B
+NetDegree : 2 s_vldB-s_motnB
+s_vldB B
+s_motnB B
+NetDegree : 2 s_shpe-s_txtrA
+s_shpe B
+s_txtrA B
+NetDegree : 2 s_motnB-s_txtrD
+s_motnB B
+s_txtrD B
+NetDegree : 2 s_txtrA-s_vcv2
+s_txtrA B
+s_vcv2 B
+NetDegree : 2 s_txtD-s_vcv2
+s_txtrD B
+s_vcv2 B
+NetDegree : 2 s_vcv2-s_vcv3
+s_vcv2 B
+s_vcv3 B
+NetDegree : 2 s_vcv3-s_pad
+s_vcv3 B
+s_pad B
+NetDegree : 2 s_vcv3-s_drngA
+s_vcv3 B
+s_drngA B
+NetDegree : 2 s_vcv3-s_drngB
+s_vcv3 B
+s_drngB B
+NetDegree : 2 s_pad-s_vmv
+s_pad B
+s_vmv B
+NetDegree : 2 s_drngA-s_vmv
+s_drngA B
+s_vmv B
+NetDegree : 2 s_drngB-s_vmv
+s_drngB B
+s_vmv B

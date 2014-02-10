@@ -1,0 +1,50 @@
+define computation
+
+# computational requirement in MIPS
+in 125
+nr 500
+hvs 125
+jug2a 125
+jug2b 125
+hs 125
+vs 125
+jug1a 125
+jug1b 125
+jug1c 125
+jug1d 125
+se 125
+blnd 125
+
+# storage requirement in kB
+mem1 1024
+mem2 1024
+mem3 1024
+
+end
+
+define communication
+
+# communication requirement in kB/s
+in nr 65536
+in hs 131072
+hs vs 98304
+vs jug1a 24576
+vs jug1b 24576
+vs jug1c 24576
+vs jug1d 24576
+nr mem1 65536
+mem1 nr 65536
+nr mem2 98304
+mem2 hvs 98304
+jug1a mem3 24576
+jug1b mem3 24576
+jug1c mem3 24576
+jug1d mem3 24576
+hvs jug2a 49152
+hvs jug2b 49152
+jug2a mem3 49152
+jug2b mem3 49152
+mem3 se 65536
+se blnd 65536
+
+end
